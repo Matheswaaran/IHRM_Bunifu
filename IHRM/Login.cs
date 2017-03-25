@@ -31,8 +31,20 @@ namespace IHRM
         private void login_reset_Click(object sender, EventArgs e)
         {
             login_username.Text = "";
-            login_password.Text = "";
+            login_password.Text = "1";
+            login_password.isPassword = true;
             login_username.Focus();
+        }
+
+        private void login_loginBtn_Click(object sender, EventArgs e)
+        {
+            List.List lsit = new List.List();
+            lsit.Show();
+        }
+
+        private void login_password_OnValueChanged(object sender, EventArgs e)
+        {
+            login_password.isPassword = true;
         }
     }
 }
