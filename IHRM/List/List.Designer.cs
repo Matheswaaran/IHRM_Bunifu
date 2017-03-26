@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(List));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.panel_menu = new System.Windows.Forms.Panel();
             this.list_exit = new ns1.BunifuImageButton();
             this.panel_navigation = new System.Windows.Forms.Panel();
-            this.btn_site = new ns1.BunifuFlatButton();
+            this.btn_logout = new ns1.BunifuFlatButton();
             this.btn_setting = new ns1.BunifuFlatButton();
             this.btn_empVerification = new ns1.BunifuFlatButton();
             this.btn_employee = new ns1.BunifuFlatButton();
@@ -48,6 +50,13 @@
             this.list_logo = new ns1.BunifuCustomLabel();
             this.panel_home = new System.Windows.Forms.Panel();
             this.panel_contract = new System.Windows.Forms.Panel();
+            this.panel_supervisour = new System.Windows.Forms.Panel();
+            this.supervisour_searchBtn = new ns1.BunifuImageButton();
+            this.supervisour_search = new ns1.BunifuMaterialTextbox();
+            this.supervisour_Datagrid = new ns1.BunifuCustomDataGrid();
+            this.supervisour_modify = new ns1.BunifuThinButton2();
+            this.supervisour_delete = new ns1.BunifuThinButton2();
+            this.supervisour_add = new ns1.BunifuThinButton2();
             this.contract_searchBtn = new ns1.BunifuImageButton();
             this.contract_search = new ns1.BunifuMaterialTextbox();
             this.contract_Datagrid = new ns1.BunifuCustomDataGrid();
@@ -65,6 +74,9 @@
             this.panel_navigation.SuspendLayout();
             this.panel_home.SuspendLayout();
             this.panel_contract.SuspendLayout();
+            this.panel_supervisour.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.supervisour_searchBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supervisour_Datagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contract_searchBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contract_Datagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.site_searchBtn)).BeginInit();
@@ -103,7 +115,7 @@
             // panel_navigation
             // 
             this.panel_navigation.BackColor = System.Drawing.Color.White;
-            this.panel_navigation.Controls.Add(this.btn_site);
+            this.panel_navigation.Controls.Add(this.btn_logout);
             this.panel_navigation.Controls.Add(this.btn_setting);
             this.panel_navigation.Controls.Add(this.btn_empVerification);
             this.panel_navigation.Controls.Add(this.btn_employee);
@@ -116,41 +128,40 @@
             this.panel_navigation.Name = "panel_navigation";
             this.panel_navigation.Size = new System.Drawing.Size(204, 451);
             this.panel_navigation.TabIndex = 1;
-            this.panel_navigation.Paint += new System.Windows.Forms.PaintEventHandler(this.list_navigation_Paint);
             // 
-            // btn_site
+            // btn_logout
             // 
-            this.btn_site.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_site.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_site.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_site.BorderRadius = 0;
-            this.btn_site.ButtonText = " Logout";
-            this.btn_site.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_site.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_site.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_site.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_site.Iconimage")));
-            this.btn_site.Iconimage_right = null;
-            this.btn_site.Iconimage_right_Selected = null;
-            this.btn_site.Iconimage_Selected = null;
-            this.btn_site.IconMarginLeft = 0;
-            this.btn_site.IconMarginRight = 0;
-            this.btn_site.IconRightVisible = true;
-            this.btn_site.IconRightZoom = 0D;
-            this.btn_site.IconVisible = true;
-            this.btn_site.IconZoom = 90D;
-            this.btn_site.IsTab = false;
-            this.btn_site.Location = new System.Drawing.Point(2, 400);
-            this.btn_site.Name = "btn_site";
-            this.btn_site.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_site.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_site.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_site.selected = false;
-            this.btn_site.Size = new System.Drawing.Size(201, 48);
-            this.btn_site.TabIndex = 15;
-            this.btn_site.Text = " Logout";
-            this.btn_site.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_site.Textcolor = System.Drawing.Color.White;
-            this.btn_site.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_logout.BorderRadius = 0;
+            this.btn_logout.ButtonText = " Logout";
+            this.btn_logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_logout.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_logout.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_logout.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_logout.Iconimage")));
+            this.btn_logout.Iconimage_right = null;
+            this.btn_logout.Iconimage_right_Selected = null;
+            this.btn_logout.Iconimage_Selected = null;
+            this.btn_logout.IconMarginLeft = 0;
+            this.btn_logout.IconMarginRight = 0;
+            this.btn_logout.IconRightVisible = true;
+            this.btn_logout.IconRightZoom = 0D;
+            this.btn_logout.IconVisible = true;
+            this.btn_logout.IconZoom = 90D;
+            this.btn_logout.IsTab = false;
+            this.btn_logout.Location = new System.Drawing.Point(2, 400);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_logout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_logout.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_logout.selected = false;
+            this.btn_logout.Size = new System.Drawing.Size(201, 48);
+            this.btn_logout.TabIndex = 15;
+            this.btn_logout.Text = " Logout";
+            this.btn_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_logout.Textcolor = System.Drawing.Color.White;
+            this.btn_logout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_setting
             // 
@@ -287,6 +298,7 @@
             this.btn_supervisour.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_supervisour.Textcolor = System.Drawing.Color.White;
             this.btn_supervisour.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_supervisour.Click += new System.EventHandler(this.btn_supervisour_Click);
             // 
             // btn_contract
             // 
@@ -356,7 +368,7 @@
             this.btn_home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_home.Textcolor = System.Drawing.Color.White;
             this.btn_home.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_home.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // list_logo
             // 
@@ -383,11 +395,11 @@
             this.panel_home.Name = "panel_home";
             this.panel_home.Size = new System.Drawing.Size(740, 451);
             this.panel_home.TabIndex = 0;
-            this.panel_home.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel_contract
             // 
             this.panel_contract.BackColor = System.Drawing.Color.White;
+            this.panel_contract.Controls.Add(this.panel_supervisour);
             this.panel_contract.Controls.Add(this.contract_searchBtn);
             this.panel_contract.Controls.Add(this.contract_search);
             this.panel_contract.Controls.Add(this.contract_Datagrid);
@@ -399,6 +411,154 @@
             this.panel_contract.Name = "panel_contract";
             this.panel_contract.Size = new System.Drawing.Size(740, 451);
             this.panel_contract.TabIndex = 9;
+            // 
+            // panel_supervisour
+            // 
+            this.panel_supervisour.BackColor = System.Drawing.Color.White;
+            this.panel_supervisour.Controls.Add(this.supervisour_searchBtn);
+            this.panel_supervisour.Controls.Add(this.supervisour_search);
+            this.panel_supervisour.Controls.Add(this.supervisour_Datagrid);
+            this.panel_supervisour.Controls.Add(this.supervisour_modify);
+            this.panel_supervisour.Controls.Add(this.supervisour_delete);
+            this.panel_supervisour.Controls.Add(this.supervisour_add);
+            this.panel_supervisour.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_supervisour.Location = new System.Drawing.Point(0, 0);
+            this.panel_supervisour.Name = "panel_supervisour";
+            this.panel_supervisour.Size = new System.Drawing.Size(740, 451);
+            this.panel_supervisour.TabIndex = 10;
+            // 
+            // supervisour_searchBtn
+            // 
+            this.supervisour_searchBtn.BackColor = System.Drawing.Color.Transparent;
+            this.supervisour_searchBtn.Image = global::IHRM.Properties.Resources.search;
+            this.supervisour_searchBtn.ImageActive = null;
+            this.supervisour_searchBtn.Location = new System.Drawing.Point(668, 8);
+            this.supervisour_searchBtn.Name = "supervisour_searchBtn";
+            this.supervisour_searchBtn.Size = new System.Drawing.Size(34, 40);
+            this.supervisour_searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.supervisour_searchBtn.TabIndex = 8;
+            this.supervisour_searchBtn.TabStop = false;
+            this.supervisour_searchBtn.Zoom = 10;
+            // 
+            // supervisour_search
+            // 
+            this.supervisour_search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.supervisour_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.supervisour_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.supervisour_search.HintForeColor = System.Drawing.Color.Empty;
+            this.supervisour_search.HintText = "Enter Supervisour Id to Search";
+            this.supervisour_search.isPassword = false;
+            this.supervisour_search.LineFocusedColor = System.Drawing.Color.Green;
+            this.supervisour_search.LineIdleColor = System.Drawing.Color.Gray;
+            this.supervisour_search.LineMouseHoverColor = System.Drawing.Color.Green;
+            this.supervisour_search.LineThickness = 3;
+            this.supervisour_search.Location = new System.Drawing.Point(393, 17);
+            this.supervisour_search.Margin = new System.Windows.Forms.Padding(4);
+            this.supervisour_search.Name = "supervisour_search";
+            this.supervisour_search.Size = new System.Drawing.Size(268, 31);
+            this.supervisour_search.TabIndex = 7;
+            this.supervisour_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // supervisour_Datagrid
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.supervisour_Datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.supervisour_Datagrid.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.supervisour_Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.supervisour_Datagrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.supervisour_Datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.supervisour_Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.supervisour_Datagrid.DoubleBuffered = true;
+            this.supervisour_Datagrid.EnableHeadersVisualStyles = false;
+            this.supervisour_Datagrid.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.supervisour_Datagrid.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.supervisour_Datagrid.Location = new System.Drawing.Point(6, 65);
+            this.supervisour_Datagrid.Name = "supervisour_Datagrid";
+            this.supervisour_Datagrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.supervisour_Datagrid.Size = new System.Drawing.Size(716, 374);
+            this.supervisour_Datagrid.TabIndex = 6;
+            // 
+            // supervisour_modify
+            // 
+            this.supervisour_modify.ActiveBorderThickness = 1;
+            this.supervisour_modify.ActiveCornerRadius = 20;
+            this.supervisour_modify.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.supervisour_modify.ActiveForecolor = System.Drawing.Color.White;
+            this.supervisour_modify.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.supervisour_modify.BackColor = System.Drawing.Color.White;
+            this.supervisour_modify.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("supervisour_modify.BackgroundImage")));
+            this.supervisour_modify.ButtonText = "Modify";
+            this.supervisour_modify.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.supervisour_modify.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supervisour_modify.ForeColor = System.Drawing.Color.SeaGreen;
+            this.supervisour_modify.IdleBorderThickness = 1;
+            this.supervisour_modify.IdleCornerRadius = 20;
+            this.supervisour_modify.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.supervisour_modify.IdleForecolor = System.Drawing.Color.White;
+            this.supervisour_modify.IdleLineColor = System.Drawing.Color.White;
+            this.supervisour_modify.Location = new System.Drawing.Point(221, 8);
+            this.supervisour_modify.Margin = new System.Windows.Forms.Padding(5);
+            this.supervisour_modify.Name = "supervisour_modify";
+            this.supervisour_modify.Size = new System.Drawing.Size(98, 49);
+            this.supervisour_modify.TabIndex = 5;
+            this.supervisour_modify.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // supervisour_delete
+            // 
+            this.supervisour_delete.ActiveBorderThickness = 1;
+            this.supervisour_delete.ActiveCornerRadius = 20;
+            this.supervisour_delete.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.supervisour_delete.ActiveForecolor = System.Drawing.Color.White;
+            this.supervisour_delete.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.supervisour_delete.BackColor = System.Drawing.Color.White;
+            this.supervisour_delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("supervisour_delete.BackgroundImage")));
+            this.supervisour_delete.ButtonText = "Delete";
+            this.supervisour_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.supervisour_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supervisour_delete.ForeColor = System.Drawing.Color.SeaGreen;
+            this.supervisour_delete.IdleBorderThickness = 1;
+            this.supervisour_delete.IdleCornerRadius = 20;
+            this.supervisour_delete.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.supervisour_delete.IdleForecolor = System.Drawing.Color.White;
+            this.supervisour_delete.IdleLineColor = System.Drawing.Color.White;
+            this.supervisour_delete.Location = new System.Drawing.Point(113, 8);
+            this.supervisour_delete.Margin = new System.Windows.Forms.Padding(5);
+            this.supervisour_delete.Name = "supervisour_delete";
+            this.supervisour_delete.Size = new System.Drawing.Size(98, 49);
+            this.supervisour_delete.TabIndex = 4;
+            this.supervisour_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // supervisour_add
+            // 
+            this.supervisour_add.ActiveBorderThickness = 1;
+            this.supervisour_add.ActiveCornerRadius = 20;
+            this.supervisour_add.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.supervisour_add.ActiveForecolor = System.Drawing.Color.White;
+            this.supervisour_add.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.supervisour_add.BackColor = System.Drawing.Color.White;
+            this.supervisour_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("supervisour_add.BackgroundImage")));
+            this.supervisour_add.ButtonText = "Add";
+            this.supervisour_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.supervisour_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supervisour_add.ForeColor = System.Drawing.Color.SeaGreen;
+            this.supervisour_add.IdleBorderThickness = 1;
+            this.supervisour_add.IdleCornerRadius = 20;
+            this.supervisour_add.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.supervisour_add.IdleForecolor = System.Drawing.Color.White;
+            this.supervisour_add.IdleLineColor = System.Drawing.Color.White;
+            this.supervisour_add.Location = new System.Drawing.Point(7, 8);
+            this.supervisour_add.Margin = new System.Windows.Forms.Padding(5);
+            this.supervisour_add.Name = "supervisour_add";
+            this.supervisour_add.Size = new System.Drawing.Size(98, 49);
+            this.supervisour_add.TabIndex = 3;
+            this.supervisour_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // contract_searchBtn
             // 
@@ -434,19 +594,19 @@
             // 
             // contract_Datagrid
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.contract_Datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.contract_Datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.contract_Datagrid.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.contract_Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.contract_Datagrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.contract_Datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.contract_Datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.contract_Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.contract_Datagrid.DoubleBuffered = true;
             this.contract_Datagrid.EnableHeadersVisualStyles = false;
@@ -564,23 +724,22 @@
             this.site_search.Size = new System.Drawing.Size(268, 31);
             this.site_search.TabIndex = 7;
             this.site_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.site_search.OnValueChanged += new System.EventHandler(this.login_username_OnValueChanged);
             // 
             // site_Datagrid
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.site_Datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.site_Datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.site_Datagrid.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.site_Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.site_Datagrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.site_Datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.site_Datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.site_Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.site_Datagrid.DoubleBuffered = true;
             this.site_Datagrid.EnableHeadersVisualStyles = false;
@@ -685,6 +844,9 @@
             this.panel_navigation.PerformLayout();
             this.panel_home.ResumeLayout(false);
             this.panel_contract.ResumeLayout(false);
+            this.panel_supervisour.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.supervisour_searchBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supervisour_Datagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contract_searchBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contract_Datagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.site_searchBtn)).EndInit();
@@ -720,6 +882,13 @@
         private ns1.BunifuFlatButton btn_setting;
         private ns1.BunifuFlatButton btn_empVerification;
         private ns1.BunifuFlatButton btn_employee;
-        private ns1.BunifuFlatButton btn_site;
+        private ns1.BunifuFlatButton btn_logout;
+        private System.Windows.Forms.Panel panel_supervisour;
+        private ns1.BunifuImageButton supervisour_searchBtn;
+        private ns1.BunifuMaterialTextbox supervisour_search;
+        private ns1.BunifuCustomDataGrid supervisour_Datagrid;
+        private ns1.BunifuThinButton2 supervisour_modify;
+        private ns1.BunifuThinButton2 supervisour_delete;
+        private ns1.BunifuThinButton2 supervisour_add;
     }
 }
