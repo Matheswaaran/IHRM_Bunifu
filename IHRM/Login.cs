@@ -18,7 +18,6 @@ namespace IHRM
             InitializeComponent();
         }
 
-
         private void login_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();

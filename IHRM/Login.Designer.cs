@@ -175,7 +175,7 @@
             this.login_forgot.Location = new System.Drawing.Point(650, 286);
             this.login_forgot.Name = "login_forgot";
             this.login_forgot.Size = new System.Drawing.Size(92, 13);
-            this.login_forgot.TabIndex = 6;
+            this.login_forgot.TabIndex = 4;
             this.login_forgot.TabStop = true;
             this.login_forgot.Text = "Forgot Password?";
             // 
@@ -220,7 +220,7 @@
             this.login_about.Margin = new System.Windows.Forms.Padding(5);
             this.login_about.Name = "login_about";
             this.login_about.Size = new System.Drawing.Size(117, 51);
-            this.login_about.TabIndex = 10;
+            this.login_about.TabIndex = 5;
             this.login_about.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // login_contact
@@ -245,7 +245,7 @@
             this.login_contact.Margin = new System.Windows.Forms.Padding(5);
             this.login_contact.Name = "login_contact";
             this.login_contact.Size = new System.Drawing.Size(120, 51);
-            this.login_contact.TabIndex = 11;
+            this.login_contact.TabIndex = 6;
             this.login_contact.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // login_reset
@@ -270,7 +270,7 @@
             this.login_reset.Margin = new System.Windows.Forms.Padding(5);
             this.login_reset.Name = "login_reset";
             this.login_reset.Size = new System.Drawing.Size(98, 49);
-            this.login_reset.TabIndex = 12;
+            this.login_reset.TabIndex = 3;
             this.login_reset.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.login_reset.Click += new System.EventHandler(this.login_reset_Click);
             // 
