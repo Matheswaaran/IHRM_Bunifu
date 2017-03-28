@@ -83,5 +83,11 @@ namespace IHRM
         {
             login_password.isPassword = true;
         }
+
+        private void login_about_Click(object sender, EventArgs e)
+        {
+            //login_username.Text = Utils.Global.CreateMD5(login_password.ToString());
+            //MessageBox.Show(Utils.Global.CreateMD5(login_password.ToString()), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

@@ -222,6 +222,7 @@
             this.login_about.Size = new System.Drawing.Size(117, 51);
             this.login_about.TabIndex = 5;
             this.login_about.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.login_about.Click += new System.EventHandler(this.login_about_Click);
             // 
             // login_contact
             // 
