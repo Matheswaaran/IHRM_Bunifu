@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Add_Site.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Add_Site.Designer.cs">
+      <DependentUpon>Add_Site.cs</DependentUpon>
+    </Compile>
     <Compile Include="List\List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Utils\Global.cs" />
     <Compile Include="Utils\Mysql.cs" />
     <Compile Include="Utils\Session.cs" />
+    <EmbeddedResource Include="Data\Add_Site.resx">
+      <DependentUpon>Add_Site.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="List\List.resx">
       <DependentUpon>List.cs</DependentUpon>
     </EmbeddedResource>
