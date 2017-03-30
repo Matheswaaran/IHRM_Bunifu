@@ -159,6 +159,7 @@
             this.add_Site_cancel.Size = new System.Drawing.Size(108, 49);
             this.add_Site_cancel.TabIndex = 11;
             this.add_Site_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.add_Site_cancel.Click += new System.EventHandler(this.add_Site_cancel_Click);
             // 
             // add_Site_add
             // 
@@ -184,6 +185,7 @@
             this.add_Site_add.Size = new System.Drawing.Size(108, 49);
             this.add_Site_add.TabIndex = 10;
             this.add_Site_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.add_Site_add.Click += new System.EventHandler(this.add_Site_add_Click);
             // 
             // bunifuCustomLabel1
             // 

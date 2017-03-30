@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Add_Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Add_Contract.Designer.cs">
+      <DependentUpon>Add_Contract.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data\Add_Site.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Utils\Global.cs" />
     <Compile Include="Utils\Mysql.cs" />
     <Compile Include="Utils\Session.cs" />
+    <EmbeddedResource Include="Data\Add_Contract.resx">
+      <DependentUpon>Add_Contract.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Add_Site.resx">
       <DependentUpon>Add_Site.cs</DependentUpon>
     </EmbeddedResource>

@@ -138,6 +138,7 @@ namespace IHRM.List
                 bSource.DataSource = dt;
                 site_Datagrid.DataSource = bSource;
                 sda.Update(dt);
+                table = "employee_table";
             }
             catch (Exception ex)
             {
@@ -172,8 +173,20 @@ namespace IHRM.List
 
         private void site_add_Click(object sender, EventArgs e)
         {
-            Data.Add_Site addSite = new Data.Add_Site();
-            addSite.Show();
+            switch (table)
+            {
+                case "site_table":
+                    Data.Add_Site addSite = new Data.Add_Site();
+                    addSite.Show();
+                    break;
+                case "contract_users":
+                    Data.Add_Contract addContract = new Data.Add_Contract();
+                    addContract.Show();
+                    break;
+                default:
+                    MessageBox.Show("Select a button from the navigation menu", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+            }
         }
     }
 }
