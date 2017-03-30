@@ -18,18 +18,28 @@ namespace IHRM.Data
             InitializeComponent();
         }
 
-        private void list_exit_Click(object sender, EventArgs e)
+        private void add_contract_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void add_Site_add_Click(object sender, EventArgs e)
+        private void add_contract_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void add_contract_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void add_contract_add_Click(object sender, EventArgs e)
         {
             try
             {
                 int id = int.Parse(add_Contract_id.Text);
                 string name = add_Contract_name.Text;
-                string emailid= add_Contract_email.Text;
+                string emailid = add_Contract_email.Text;
                 int aadharUid = int.Parse(add_Contract_aadharUid.Text);
                 string aadharString = add_Contract_aadharString.Text;
                 string password = add_Contract_password.Text;

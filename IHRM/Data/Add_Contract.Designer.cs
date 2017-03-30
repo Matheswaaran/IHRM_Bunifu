@@ -42,16 +42,16 @@
             this.add_contract_label2 = new ns1.BunifuCustomLabel();
             this.add_contract_label1 = new ns1.BunifuCustomLabel();
             this.panel_menu = new System.Windows.Forms.Panel();
-            this.list_exit = new ns1.BunifuImageButton();
+            this.add_contract_exit = new ns1.BunifuImageButton();
             this.add_contract_subtitle = new ns1.BunifuCustomLabel();
             this.add_contract_title = new ns1.BunifuCustomLabel();
-            this.add_Site_close = new ns1.BunifuThinButton2();
-            this.add_Site_cancel = new ns1.BunifuThinButton2();
-            this.add_Site_add = new ns1.BunifuThinButton2();
+            this.add_contract_close = new ns1.BunifuThinButton2();
+            this.add_contract_cancel = new ns1.BunifuThinButton2();
+            this.add_contract_add = new ns1.BunifuThinButton2();
             this.add_Contract_password = new ns1.BunifuMaterialTextbox();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
             this.panel_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.list_exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add_contract_exit)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -207,26 +207,26 @@
             // panel_menu
             // 
             this.panel_menu.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel_menu.Controls.Add(this.list_exit);
+            this.panel_menu.Controls.Add(this.add_contract_exit);
             this.panel_menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_menu.Location = new System.Drawing.Point(0, 0);
             this.panel_menu.Name = "panel_menu";
             this.panel_menu.Size = new System.Drawing.Size(946, 33);
             this.panel_menu.TabIndex = 25;
             // 
-            // list_exit
+            // add_contract_exit
             // 
-            this.list_exit.BackColor = System.Drawing.Color.SeaGreen;
-            this.list_exit.Image = ((System.Drawing.Image)(resources.GetObject("list_exit.Image")));
-            this.list_exit.ImageActive = null;
-            this.list_exit.Location = new System.Drawing.Point(913, 5);
-            this.list_exit.Name = "list_exit";
-            this.list_exit.Size = new System.Drawing.Size(25, 22);
-            this.list_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.list_exit.TabIndex = 7;
-            this.list_exit.TabStop = false;
-            this.list_exit.Zoom = 10;
-            this.list_exit.Click += new System.EventHandler(this.list_exit_Click);
+            this.add_contract_exit.BackColor = System.Drawing.Color.SeaGreen;
+            this.add_contract_exit.Image = ((System.Drawing.Image)(resources.GetObject("add_contract_exit.Image")));
+            this.add_contract_exit.ImageActive = null;
+            this.add_contract_exit.Location = new System.Drawing.Point(913, 5);
+            this.add_contract_exit.Name = "add_contract_exit";
+            this.add_contract_exit.Size = new System.Drawing.Size(25, 22);
+            this.add_contract_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add_contract_exit.TabIndex = 7;
+            this.add_contract_exit.TabStop = false;
+            this.add_contract_exit.Zoom = 10;
+            this.add_contract_exit.Click += new System.EventHandler(this.add_contract_exit_Click);
             // 
             // add_contract_subtitle
             // 
@@ -248,81 +248,83 @@
             this.add_contract_title.TabIndex = 26;
             this.add_contract_title.Text = "Create a Contractor";
             // 
-            // add_Site_close
+            // add_contract_close
             // 
-            this.add_Site_close.ActiveBorderThickness = 1;
-            this.add_Site_close.ActiveCornerRadius = 20;
-            this.add_Site_close.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_close.ActiveForecolor = System.Drawing.Color.White;
-            this.add_Site_close.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_close.BackColor = System.Drawing.SystemColors.Control;
-            this.add_Site_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_Site_close.BackgroundImage")));
-            this.add_Site_close.ButtonText = "Close";
-            this.add_Site_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add_Site_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_Site_close.ForeColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_close.IdleBorderThickness = 1;
-            this.add_Site_close.IdleCornerRadius = 20;
-            this.add_Site_close.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
-            this.add_Site_close.IdleForecolor = System.Drawing.Color.White;
-            this.add_Site_close.IdleLineColor = System.Drawing.Color.White;
-            this.add_Site_close.Location = new System.Drawing.Point(806, 443);
-            this.add_Site_close.Margin = new System.Windows.Forms.Padding(5);
-            this.add_Site_close.Name = "add_Site_close";
-            this.add_Site_close.Size = new System.Drawing.Size(108, 49);
-            this.add_Site_close.TabIndex = 30;
-            this.add_Site_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.add_contract_close.ActiveBorderThickness = 1;
+            this.add_contract_close.ActiveCornerRadius = 20;
+            this.add_contract_close.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.add_contract_close.ActiveForecolor = System.Drawing.Color.White;
+            this.add_contract_close.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.add_contract_close.BackColor = System.Drawing.SystemColors.Control;
+            this.add_contract_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_contract_close.BackgroundImage")));
+            this.add_contract_close.ButtonText = "Close";
+            this.add_contract_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.add_contract_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_contract_close.ForeColor = System.Drawing.Color.SeaGreen;
+            this.add_contract_close.IdleBorderThickness = 1;
+            this.add_contract_close.IdleCornerRadius = 20;
+            this.add_contract_close.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.add_contract_close.IdleForecolor = System.Drawing.Color.White;
+            this.add_contract_close.IdleLineColor = System.Drawing.Color.White;
+            this.add_contract_close.Location = new System.Drawing.Point(806, 443);
+            this.add_contract_close.Margin = new System.Windows.Forms.Padding(5);
+            this.add_contract_close.Name = "add_contract_close";
+            this.add_contract_close.Size = new System.Drawing.Size(108, 49);
+            this.add_contract_close.TabIndex = 30;
+            this.add_contract_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.add_contract_close.Click += new System.EventHandler(this.add_contract_close_Click);
             // 
-            // add_Site_cancel
+            // add_contract_cancel
             // 
-            this.add_Site_cancel.ActiveBorderThickness = 1;
-            this.add_Site_cancel.ActiveCornerRadius = 20;
-            this.add_Site_cancel.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_cancel.ActiveForecolor = System.Drawing.Color.White;
-            this.add_Site_cancel.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_cancel.BackColor = System.Drawing.SystemColors.Control;
-            this.add_Site_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_Site_cancel.BackgroundImage")));
-            this.add_Site_cancel.ButtonText = "Cancel";
-            this.add_Site_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add_Site_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_Site_cancel.ForeColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_cancel.IdleBorderThickness = 1;
-            this.add_Site_cancel.IdleCornerRadius = 20;
-            this.add_Site_cancel.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
-            this.add_Site_cancel.IdleForecolor = System.Drawing.Color.White;
-            this.add_Site_cancel.IdleLineColor = System.Drawing.Color.White;
-            this.add_Site_cancel.Location = new System.Drawing.Point(688, 443);
-            this.add_Site_cancel.Margin = new System.Windows.Forms.Padding(5);
-            this.add_Site_cancel.Name = "add_Site_cancel";
-            this.add_Site_cancel.Size = new System.Drawing.Size(108, 49);
-            this.add_Site_cancel.TabIndex = 29;
-            this.add_Site_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.add_contract_cancel.ActiveBorderThickness = 1;
+            this.add_contract_cancel.ActiveCornerRadius = 20;
+            this.add_contract_cancel.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.add_contract_cancel.ActiveForecolor = System.Drawing.Color.White;
+            this.add_contract_cancel.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.add_contract_cancel.BackColor = System.Drawing.SystemColors.Control;
+            this.add_contract_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_contract_cancel.BackgroundImage")));
+            this.add_contract_cancel.ButtonText = "Cancel";
+            this.add_contract_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.add_contract_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_contract_cancel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.add_contract_cancel.IdleBorderThickness = 1;
+            this.add_contract_cancel.IdleCornerRadius = 20;
+            this.add_contract_cancel.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.add_contract_cancel.IdleForecolor = System.Drawing.Color.White;
+            this.add_contract_cancel.IdleLineColor = System.Drawing.Color.White;
+            this.add_contract_cancel.Location = new System.Drawing.Point(688, 443);
+            this.add_contract_cancel.Margin = new System.Windows.Forms.Padding(5);
+            this.add_contract_cancel.Name = "add_contract_cancel";
+            this.add_contract_cancel.Size = new System.Drawing.Size(108, 49);
+            this.add_contract_cancel.TabIndex = 29;
+            this.add_contract_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.add_contract_cancel.Click += new System.EventHandler(this.add_contract_cancel_Click);
             // 
-            // add_Site_add
+            // add_contract_add
             // 
-            this.add_Site_add.ActiveBorderThickness = 1;
-            this.add_Site_add.ActiveCornerRadius = 20;
-            this.add_Site_add.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_add.ActiveForecolor = System.Drawing.Color.White;
-            this.add_Site_add.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_add.BackColor = System.Drawing.SystemColors.Control;
-            this.add_Site_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_Site_add.BackgroundImage")));
-            this.add_Site_add.ButtonText = "Add";
-            this.add_Site_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add_Site_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_Site_add.ForeColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_add.IdleBorderThickness = 1;
-            this.add_Site_add.IdleCornerRadius = 20;
-            this.add_Site_add.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
-            this.add_Site_add.IdleForecolor = System.Drawing.Color.White;
-            this.add_Site_add.IdleLineColor = System.Drawing.Color.White;
-            this.add_Site_add.Location = new System.Drawing.Point(570, 443);
-            this.add_Site_add.Margin = new System.Windows.Forms.Padding(5);
-            this.add_Site_add.Name = "add_Site_add";
-            this.add_Site_add.Size = new System.Drawing.Size(108, 49);
-            this.add_Site_add.TabIndex = 28;
-            this.add_Site_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.add_Site_add.Click += new System.EventHandler(this.add_Site_add_Click);
+            this.add_contract_add.ActiveBorderThickness = 1;
+            this.add_contract_add.ActiveCornerRadius = 20;
+            this.add_contract_add.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.add_contract_add.ActiveForecolor = System.Drawing.Color.White;
+            this.add_contract_add.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.add_contract_add.BackColor = System.Drawing.SystemColors.Control;
+            this.add_contract_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_contract_add.BackgroundImage")));
+            this.add_contract_add.ButtonText = "Add";
+            this.add_contract_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.add_contract_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_contract_add.ForeColor = System.Drawing.Color.SeaGreen;
+            this.add_contract_add.IdleBorderThickness = 1;
+            this.add_contract_add.IdleCornerRadius = 20;
+            this.add_contract_add.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.add_contract_add.IdleForecolor = System.Drawing.Color.White;
+            this.add_contract_add.IdleLineColor = System.Drawing.Color.White;
+            this.add_contract_add.Location = new System.Drawing.Point(570, 443);
+            this.add_contract_add.Margin = new System.Windows.Forms.Padding(5);
+            this.add_contract_add.Name = "add_contract_add";
+            this.add_contract_add.Size = new System.Drawing.Size(108, 49);
+            this.add_contract_add.TabIndex = 28;
+            this.add_contract_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.add_contract_add.Click += new System.EventHandler(this.add_contract_add_Click);
             // 
             // add_Contract_password
             // 
@@ -371,16 +373,16 @@
             this.Controls.Add(this.add_contract_label2);
             this.Controls.Add(this.add_contract_label1);
             this.Controls.Add(this.panel_menu);
-            this.Controls.Add(this.add_Site_close);
-            this.Controls.Add(this.add_Site_cancel);
+            this.Controls.Add(this.add_contract_close);
+            this.Controls.Add(this.add_contract_cancel);
             this.Controls.Add(this.add_contract_subtitle);
-            this.Controls.Add(this.add_Site_add);
+            this.Controls.Add(this.add_contract_add);
             this.Controls.Add(this.add_contract_title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add_Contract";
             this.Text = "Add_Contract";
             this.panel_menu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.list_exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add_contract_exit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,11 +402,11 @@
         private ns1.BunifuCustomLabel add_contract_label2;
         private ns1.BunifuCustomLabel add_contract_label1;
         private System.Windows.Forms.Panel panel_menu;
-        private ns1.BunifuImageButton list_exit;
-        private ns1.BunifuThinButton2 add_Site_close;
-        private ns1.BunifuThinButton2 add_Site_cancel;
+        private ns1.BunifuImageButton add_contract_exit;
+        private ns1.BunifuThinButton2 add_contract_close;
+        private ns1.BunifuThinButton2 add_contract_cancel;
         private ns1.BunifuCustomLabel add_contract_subtitle;
-        private ns1.BunifuThinButton2 add_Site_add;
+        private ns1.BunifuThinButton2 add_contract_add;
         private ns1.BunifuCustomLabel add_contract_title;
         private ns1.BunifuMaterialTextbox add_Contract_password;
         private ns1.BunifuCustomLabel bunifuCustomLabel1;

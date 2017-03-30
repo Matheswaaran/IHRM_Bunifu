@@ -183,6 +183,10 @@ namespace IHRM.List
                     Data.Add_Contract addContract = new Data.Add_Contract();
                     addContract.Show();
                     break;
+                case "supervisour_users":
+                    Data.Add_Super addSuper = new Data.Add_Super();
+                    addSuper.Show();
+                    break;
                 default:
                     MessageBox.Show("Select a button from the navigation menu", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;

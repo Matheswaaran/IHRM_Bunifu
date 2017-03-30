@@ -31,14 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Site));
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
-            this.bunifuElipse2 = new ns1.BunifuElipse(this.components);
             this.panel_menu = new System.Windows.Forms.Panel();
             this.add_subtitle = new ns1.BunifuCustomLabel();
             this.add_title = new ns1.BunifuCustomLabel();
-            this.list_exit = new ns1.BunifuImageButton();
-            this.add_Site_close = new ns1.BunifuThinButton2();
-            this.add_Site_cancel = new ns1.BunifuThinButton2();
-            this.add_Site_add = new ns1.BunifuThinButton2();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new ns1.BunifuCustomLabel();
@@ -51,6 +46,10 @@
             this.add_Site_district = new ns1.BunifuMaterialTextbox();
             this.add_Site_state = new ns1.BunifuMaterialTextbox();
             this.add_Site_type = new ns1.BunifuMaterialTextbox();
+            this.list_exit = new ns1.BunifuImageButton();
+            this.add_Site_close = new ns1.BunifuThinButton2();
+            this.add_Site_cancel = new ns1.BunifuThinButton2();
+            this.add_Site_add = new ns1.BunifuThinButton2();
             this.panel_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.list_exit)).BeginInit();
             this.SuspendLayout();
@@ -59,11 +58,6 @@
             // 
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 5;
-            this.bunifuElipse2.TargetControl = this;
             // 
             // panel_menu
             // 
@@ -94,98 +88,6 @@
             this.add_title.Size = new System.Drawing.Size(234, 45);
             this.add_title.TabIndex = 8;
             this.add_title.Text = "Create a Site";
-            // 
-            // list_exit
-            // 
-            this.list_exit.BackColor = System.Drawing.Color.SeaGreen;
-            this.list_exit.Image = ((System.Drawing.Image)(resources.GetObject("list_exit.Image")));
-            this.list_exit.ImageActive = null;
-            this.list_exit.Location = new System.Drawing.Point(913, 5);
-            this.list_exit.Name = "list_exit";
-            this.list_exit.Size = new System.Drawing.Size(25, 22);
-            this.list_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.list_exit.TabIndex = 7;
-            this.list_exit.TabStop = false;
-            this.list_exit.Zoom = 10;
-            this.list_exit.Click += new System.EventHandler(this.list_exit_Click);
-            // 
-            // add_Site_close
-            // 
-            this.add_Site_close.ActiveBorderThickness = 1;
-            this.add_Site_close.ActiveCornerRadius = 20;
-            this.add_Site_close.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_close.ActiveForecolor = System.Drawing.Color.White;
-            this.add_Site_close.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_close.BackColor = System.Drawing.SystemColors.Control;
-            this.add_Site_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_Site_close.BackgroundImage")));
-            this.add_Site_close.ButtonText = "Close";
-            this.add_Site_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add_Site_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_Site_close.ForeColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_close.IdleBorderThickness = 1;
-            this.add_Site_close.IdleCornerRadius = 20;
-            this.add_Site_close.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
-            this.add_Site_close.IdleForecolor = System.Drawing.Color.White;
-            this.add_Site_close.IdleLineColor = System.Drawing.Color.White;
-            this.add_Site_close.Location = new System.Drawing.Point(806, 439);
-            this.add_Site_close.Margin = new System.Windows.Forms.Padding(5);
-            this.add_Site_close.Name = "add_Site_close";
-            this.add_Site_close.Size = new System.Drawing.Size(108, 49);
-            this.add_Site_close.TabIndex = 12;
-            this.add_Site_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.add_Site_close.Click += new System.EventHandler(this.add_Site_close_Click);
-            // 
-            // add_Site_cancel
-            // 
-            this.add_Site_cancel.ActiveBorderThickness = 1;
-            this.add_Site_cancel.ActiveCornerRadius = 20;
-            this.add_Site_cancel.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_cancel.ActiveForecolor = System.Drawing.Color.White;
-            this.add_Site_cancel.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_cancel.BackColor = System.Drawing.SystemColors.Control;
-            this.add_Site_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_Site_cancel.BackgroundImage")));
-            this.add_Site_cancel.ButtonText = "Cancel";
-            this.add_Site_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add_Site_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_Site_cancel.ForeColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_cancel.IdleBorderThickness = 1;
-            this.add_Site_cancel.IdleCornerRadius = 20;
-            this.add_Site_cancel.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
-            this.add_Site_cancel.IdleForecolor = System.Drawing.Color.White;
-            this.add_Site_cancel.IdleLineColor = System.Drawing.Color.White;
-            this.add_Site_cancel.Location = new System.Drawing.Point(688, 439);
-            this.add_Site_cancel.Margin = new System.Windows.Forms.Padding(5);
-            this.add_Site_cancel.Name = "add_Site_cancel";
-            this.add_Site_cancel.Size = new System.Drawing.Size(108, 49);
-            this.add_Site_cancel.TabIndex = 11;
-            this.add_Site_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.add_Site_cancel.Click += new System.EventHandler(this.add_Site_cancel_Click);
-            // 
-            // add_Site_add
-            // 
-            this.add_Site_add.ActiveBorderThickness = 1;
-            this.add_Site_add.ActiveCornerRadius = 20;
-            this.add_Site_add.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_add.ActiveForecolor = System.Drawing.Color.White;
-            this.add_Site_add.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_add.BackColor = System.Drawing.SystemColors.Control;
-            this.add_Site_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_Site_add.BackgroundImage")));
-            this.add_Site_add.ButtonText = "Add";
-            this.add_Site_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add_Site_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_Site_add.ForeColor = System.Drawing.Color.SeaGreen;
-            this.add_Site_add.IdleBorderThickness = 1;
-            this.add_Site_add.IdleCornerRadius = 20;
-            this.add_Site_add.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
-            this.add_Site_add.IdleForecolor = System.Drawing.Color.White;
-            this.add_Site_add.IdleLineColor = System.Drawing.Color.White;
-            this.add_Site_add.Location = new System.Drawing.Point(570, 439);
-            this.add_Site_add.Margin = new System.Windows.Forms.Padding(5);
-            this.add_Site_add.Name = "add_Site_add";
-            this.add_Site_add.Size = new System.Drawing.Size(108, 49);
-            this.add_Site_add.TabIndex = 10;
-            this.add_Site_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.add_Site_add.Click += new System.EventHandler(this.add_Site_add_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -361,6 +263,98 @@
             this.add_Site_type.TabIndex = 24;
             this.add_Site_type.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // list_exit
+            // 
+            this.list_exit.BackColor = System.Drawing.Color.SeaGreen;
+            this.list_exit.Image = ((System.Drawing.Image)(resources.GetObject("list_exit.Image")));
+            this.list_exit.ImageActive = null;
+            this.list_exit.Location = new System.Drawing.Point(913, 5);
+            this.list_exit.Name = "list_exit";
+            this.list_exit.Size = new System.Drawing.Size(25, 22);
+            this.list_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.list_exit.TabIndex = 7;
+            this.list_exit.TabStop = false;
+            this.list_exit.Zoom = 10;
+            this.list_exit.Click += new System.EventHandler(this.list_exit_Click);
+            // 
+            // add_Site_close
+            // 
+            this.add_Site_close.ActiveBorderThickness = 1;
+            this.add_Site_close.ActiveCornerRadius = 20;
+            this.add_Site_close.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.add_Site_close.ActiveForecolor = System.Drawing.Color.White;
+            this.add_Site_close.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.add_Site_close.BackColor = System.Drawing.SystemColors.Control;
+            this.add_Site_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_Site_close.BackgroundImage")));
+            this.add_Site_close.ButtonText = "Close";
+            this.add_Site_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.add_Site_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_Site_close.ForeColor = System.Drawing.Color.SeaGreen;
+            this.add_Site_close.IdleBorderThickness = 1;
+            this.add_Site_close.IdleCornerRadius = 20;
+            this.add_Site_close.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.add_Site_close.IdleForecolor = System.Drawing.Color.White;
+            this.add_Site_close.IdleLineColor = System.Drawing.Color.White;
+            this.add_Site_close.Location = new System.Drawing.Point(806, 439);
+            this.add_Site_close.Margin = new System.Windows.Forms.Padding(5);
+            this.add_Site_close.Name = "add_Site_close";
+            this.add_Site_close.Size = new System.Drawing.Size(108, 49);
+            this.add_Site_close.TabIndex = 12;
+            this.add_Site_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.add_Site_close.Click += new System.EventHandler(this.add_Site_close_Click);
+            // 
+            // add_Site_cancel
+            // 
+            this.add_Site_cancel.ActiveBorderThickness = 1;
+            this.add_Site_cancel.ActiveCornerRadius = 20;
+            this.add_Site_cancel.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.add_Site_cancel.ActiveForecolor = System.Drawing.Color.White;
+            this.add_Site_cancel.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.add_Site_cancel.BackColor = System.Drawing.SystemColors.Control;
+            this.add_Site_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_Site_cancel.BackgroundImage")));
+            this.add_Site_cancel.ButtonText = "Cancel";
+            this.add_Site_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.add_Site_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_Site_cancel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.add_Site_cancel.IdleBorderThickness = 1;
+            this.add_Site_cancel.IdleCornerRadius = 20;
+            this.add_Site_cancel.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.add_Site_cancel.IdleForecolor = System.Drawing.Color.White;
+            this.add_Site_cancel.IdleLineColor = System.Drawing.Color.White;
+            this.add_Site_cancel.Location = new System.Drawing.Point(688, 439);
+            this.add_Site_cancel.Margin = new System.Windows.Forms.Padding(5);
+            this.add_Site_cancel.Name = "add_Site_cancel";
+            this.add_Site_cancel.Size = new System.Drawing.Size(108, 49);
+            this.add_Site_cancel.TabIndex = 11;
+            this.add_Site_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.add_Site_cancel.Click += new System.EventHandler(this.add_Site_cancel_Click);
+            // 
+            // add_Site_add
+            // 
+            this.add_Site_add.ActiveBorderThickness = 1;
+            this.add_Site_add.ActiveCornerRadius = 20;
+            this.add_Site_add.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.add_Site_add.ActiveForecolor = System.Drawing.Color.White;
+            this.add_Site_add.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.add_Site_add.BackColor = System.Drawing.SystemColors.Control;
+            this.add_Site_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_Site_add.BackgroundImage")));
+            this.add_Site_add.ButtonText = "Add";
+            this.add_Site_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.add_Site_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_Site_add.ForeColor = System.Drawing.Color.SeaGreen;
+            this.add_Site_add.IdleBorderThickness = 1;
+            this.add_Site_add.IdleCornerRadius = 20;
+            this.add_Site_add.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.add_Site_add.IdleForecolor = System.Drawing.Color.White;
+            this.add_Site_add.IdleLineColor = System.Drawing.Color.White;
+            this.add_Site_add.Location = new System.Drawing.Point(570, 439);
+            this.add_Site_add.Margin = new System.Windows.Forms.Padding(5);
+            this.add_Site_add.Name = "add_Site_add";
+            this.add_Site_add.Size = new System.Drawing.Size(108, 49);
+            this.add_Site_add.TabIndex = 10;
+            this.add_Site_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.add_Site_add.Click += new System.EventHandler(this.add_Site_add_Click);
+            // 
             // Add_Site
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,7 +398,6 @@
         private ns1.BunifuThinButton2 add_Site_add;
         private ns1.BunifuCustomLabel add_subtitle;
         private ns1.BunifuCustomLabel add_title;
-        private ns1.BunifuElipse bunifuElipse2;
         private ns1.BunifuCustomLabel bunifuCustomLabel6;
         private ns1.BunifuCustomLabel bunifuCustomLabel5;
         private ns1.BunifuCustomLabel bunifuCustomLabel4;
