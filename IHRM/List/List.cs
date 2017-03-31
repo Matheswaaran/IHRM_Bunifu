@@ -38,8 +38,11 @@ namespace IHRM.List
         }
 
         private void btn_home_Click(object sender, EventArgs e)
-        {   
-           MySqlCommand listSite = new MySqlCommand("SELECT sid,name,address,district,state from hrm_database.site_table;", Utils.MySql.myConn);
+        {
+            site_add.Visible = true;
+            site_delete.Visible = true;
+            site_modify.Visible = true;
+            MySqlCommand listSite = new MySqlCommand("SELECT sid,name,address,district,state from hrm_database.site_table;", Utils.MySql.myConn);
             try
             {
                 MySqlDataAdapter sda = new MySqlDataAdapter();
@@ -65,6 +68,9 @@ namespace IHRM.List
 
         private void btn_contract_Click(object sender, EventArgs e)
         {
+            site_add.Visible = true;
+            site_delete.Visible = true;
+            site_modify.Visible = true;
             MySqlCommand listSite = new MySqlCommand("SELECT cid,name,email,aadhar_uid,gid from hrm_database.contract_users;", Utils.MySql.myConn);
             try
             {
@@ -100,6 +106,9 @@ namespace IHRM.List
 
         private void btn_supervisour_Click(object sender, EventArgs e)
         {
+            site_add.Visible = true;
+            site_delete.Visible = true;
+            site_modify.Visible = true;
             MySqlCommand listSite = new MySqlCommand("SELECT su_id,name,email,aadhar_uid,gid from hrm_database.supervisour_users;", Utils.MySql.myConn);
             try
             {
@@ -126,6 +135,9 @@ namespace IHRM.List
 
         private void btn_employee_Click(object sender, EventArgs e)
         {
+            site_add.Visible = false;
+            site_delete.Visible = false;
+            site_modify.Visible = false;
             MySqlCommand listSite = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table;", Utils.MySql.myConn);
             try
             {
@@ -186,6 +198,56 @@ namespace IHRM.List
                 case "supervisour_users":
                     Data.Add_Super addSuper = new Data.Add_Super();
                     addSuper.Show();
+                    break;
+                default:
+                    MessageBox.Show("Select a button from the navigation menu", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+            }
+        }
+
+        private void site_delete_Click(object sender, EventArgs e)
+        {
+            string message = string.Empty;
+            switch (table)
+            {
+                case "site_table":
+                    //string message = string.Empty;
+                    foreach (DataGridViewRow row in site_Datagrid.Rows)
+                    {
+                        bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
+                        if (isSelected)
+                        {
+                            message += Environment.NewLine;
+                            message += row.Cells["Name"].Value.ToString();
+                        }
+                    }
+                    MessageBox.Show("Selected Values" + message);
+                    break;
+                case "contract_users":
+                    //string message = string.Empty;
+                    foreach (DataGridViewRow row in site_Datagrid.Rows)
+                    {
+                        bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
+                        if (isSelected)
+                        {
+                            message += Environment.NewLine;
+                            message += row.Cells["Name"].Value.ToString();
+                        }
+                    }
+                    MessageBox.Show("Selected Values" + message);
+                    break;
+                case "supervisour_users":
+                    //string message = string.Empty;
+                    foreach (DataGridViewRow row in site_Datagrid.Rows)
+                    {
+                        bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
+                        if (isSelected)
+                        {
+                            message += Environment.NewLine;
+                            message += row.Cells["Name"].Value.ToString();
+                        }
+                    }
+                    MessageBox.Show("Selected Values" + message);
                     break;
                 default:
                     MessageBox.Show("Select a button from the navigation menu", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);

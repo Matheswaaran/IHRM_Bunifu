@@ -40,7 +40,7 @@ namespace IHRM
         {
             if (string.IsNullOrEmpty(login_username.Text))
             {
-                MessageBox.Show("Please enter a username.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter a username.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 login_username.Focus();
                 return;
             }
