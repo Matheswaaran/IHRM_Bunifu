@@ -32,9 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.login_menu = new System.Windows.Forms.Panel();
-            this.login_exit = new ns1.BunifuImageButton();
             this.login_picture = new System.Windows.Forms.Panel();
-            this.login_loginBtn = new ns1.BunifuThinButton2();
             this.login_username = new ns1.BunifuMaterialTextbox();
             this.login_password = new ns1.BunifuMaterialTextbox();
             this.login_label2 = new ns1.BunifuCustomLabel();
@@ -42,10 +40,15 @@
             this.login_forgot = new System.Windows.Forms.LinkLabel();
             this.login_label1 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
-            this.login_about = new ns1.BunifuThinButton2();
-            this.login_contact = new ns1.BunifuThinButton2();
             this.login_reset = new ns1.BunifuThinButton2();
+            this.login_contact = new ns1.BunifuThinButton2();
+            this.login_about = new ns1.BunifuThinButton2();
+            this.login_loginBtn = new ns1.BunifuThinButton2();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.login_exit = new ns1.BunifuImageButton();
             this.login_menu.SuspendLayout();
+            this.login_picture.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.login_exit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,53 +67,14 @@
             this.login_menu.Size = new System.Drawing.Size(941, 29);
             this.login_menu.TabIndex = 0;
             // 
-            // login_exit
-            // 
-            this.login_exit.BackColor = System.Drawing.Color.SeaGreen;
-            this.login_exit.Image = ((System.Drawing.Image)(resources.GetObject("login_exit.Image")));
-            this.login_exit.ImageActive = null;
-            this.login_exit.Location = new System.Drawing.Point(913, 3);
-            this.login_exit.Name = "login_exit";
-            this.login_exit.Size = new System.Drawing.Size(25, 22);
-            this.login_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.login_exit.TabIndex = 6;
-            this.login_exit.TabStop = false;
-            this.login_exit.Zoom = 10;
-            this.login_exit.Click += new System.EventHandler(this.login_exit_Click);
-            // 
             // login_picture
             // 
+            this.login_picture.Controls.Add(this.pictureBox1);
             this.login_picture.Dock = System.Windows.Forms.DockStyle.Left;
             this.login_picture.Location = new System.Drawing.Point(0, 29);
             this.login_picture.Name = "login_picture";
             this.login_picture.Size = new System.Drawing.Size(621, 460);
             this.login_picture.TabIndex = 1;
-            // 
-            // login_loginBtn
-            // 
-            this.login_loginBtn.ActiveBorderThickness = 1;
-            this.login_loginBtn.ActiveCornerRadius = 20;
-            this.login_loginBtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.login_loginBtn.ActiveForecolor = System.Drawing.Color.White;
-            this.login_loginBtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.login_loginBtn.BackColor = System.Drawing.Color.White;
-            this.login_loginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login_loginBtn.BackgroundImage")));
-            this.login_loginBtn.ButtonText = "Login";
-            this.login_loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.login_loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_loginBtn.ForeColor = System.Drawing.Color.SeaGreen;
-            this.login_loginBtn.IdleBorderThickness = 1;
-            this.login_loginBtn.IdleCornerRadius = 20;
-            this.login_loginBtn.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
-            this.login_loginBtn.IdleForecolor = System.Drawing.Color.White;
-            this.login_loginBtn.IdleLineColor = System.Drawing.Color.White;
-            this.login_loginBtn.Location = new System.Drawing.Point(823, 271);
-            this.login_loginBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.login_loginBtn.Name = "login_loginBtn";
-            this.login_loginBtn.Size = new System.Drawing.Size(98, 49);
-            this.login_loginBtn.TabIndex = 2;
-            this.login_loginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.login_loginBtn.Click += new System.EventHandler(this.login_loginBtn_Click);
             // 
             // login_username
             // 
@@ -198,57 +162,6 @@
             this.bunifuCustomLabel2.TabIndex = 9;
             this.bunifuCustomLabel2.Text = "Enter your Username and Password below.";
             // 
-            // login_about
-            // 
-            this.login_about.ActiveBorderThickness = 1;
-            this.login_about.ActiveCornerRadius = 20;
-            this.login_about.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.login_about.ActiveForecolor = System.Drawing.Color.White;
-            this.login_about.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.login_about.BackColor = System.Drawing.Color.White;
-            this.login_about.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login_about.BackgroundImage")));
-            this.login_about.ButtonText = "About Us";
-            this.login_about.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.login_about.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_about.ForeColor = System.Drawing.Color.SeaGreen;
-            this.login_about.IdleBorderThickness = 1;
-            this.login_about.IdleCornerRadius = 20;
-            this.login_about.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
-            this.login_about.IdleForecolor = System.Drawing.Color.White;
-            this.login_about.IdleLineColor = System.Drawing.Color.White;
-            this.login_about.Location = new System.Drawing.Point(674, 424);
-            this.login_about.Margin = new System.Windows.Forms.Padding(5);
-            this.login_about.Name = "login_about";
-            this.login_about.Size = new System.Drawing.Size(117, 51);
-            this.login_about.TabIndex = 5;
-            this.login_about.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.login_about.Click += new System.EventHandler(this.login_about_Click);
-            // 
-            // login_contact
-            // 
-            this.login_contact.ActiveBorderThickness = 1;
-            this.login_contact.ActiveCornerRadius = 20;
-            this.login_contact.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.login_contact.ActiveForecolor = System.Drawing.Color.White;
-            this.login_contact.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.login_contact.BackColor = System.Drawing.Color.White;
-            this.login_contact.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login_contact.BackgroundImage")));
-            this.login_contact.ButtonText = "Contact Us";
-            this.login_contact.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.login_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_contact.ForeColor = System.Drawing.Color.SeaGreen;
-            this.login_contact.IdleBorderThickness = 1;
-            this.login_contact.IdleCornerRadius = 20;
-            this.login_contact.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
-            this.login_contact.IdleForecolor = System.Drawing.Color.White;
-            this.login_contact.IdleLineColor = System.Drawing.Color.White;
-            this.login_contact.Location = new System.Drawing.Point(801, 424);
-            this.login_contact.Margin = new System.Windows.Forms.Padding(5);
-            this.login_contact.Name = "login_contact";
-            this.login_contact.Size = new System.Drawing.Size(120, 51);
-            this.login_contact.TabIndex = 6;
-            this.login_contact.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // login_reset
             // 
             this.login_reset.ActiveBorderThickness = 1;
@@ -275,6 +188,107 @@
             this.login_reset.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.login_reset.Click += new System.EventHandler(this.login_reset_Click);
             // 
+            // login_contact
+            // 
+            this.login_contact.ActiveBorderThickness = 1;
+            this.login_contact.ActiveCornerRadius = 20;
+            this.login_contact.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.login_contact.ActiveForecolor = System.Drawing.Color.White;
+            this.login_contact.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.login_contact.BackColor = System.Drawing.Color.White;
+            this.login_contact.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login_contact.BackgroundImage")));
+            this.login_contact.ButtonText = "Contact Us";
+            this.login_contact.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_contact.ForeColor = System.Drawing.Color.SeaGreen;
+            this.login_contact.IdleBorderThickness = 1;
+            this.login_contact.IdleCornerRadius = 20;
+            this.login_contact.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.login_contact.IdleForecolor = System.Drawing.Color.White;
+            this.login_contact.IdleLineColor = System.Drawing.Color.White;
+            this.login_contact.Location = new System.Drawing.Point(801, 424);
+            this.login_contact.Margin = new System.Windows.Forms.Padding(5);
+            this.login_contact.Name = "login_contact";
+            this.login_contact.Size = new System.Drawing.Size(120, 51);
+            this.login_contact.TabIndex = 6;
+            this.login_contact.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // login_about
+            // 
+            this.login_about.ActiveBorderThickness = 1;
+            this.login_about.ActiveCornerRadius = 20;
+            this.login_about.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.login_about.ActiveForecolor = System.Drawing.Color.White;
+            this.login_about.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.login_about.BackColor = System.Drawing.Color.White;
+            this.login_about.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login_about.BackgroundImage")));
+            this.login_about.ButtonText = "About Us";
+            this.login_about.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_about.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_about.ForeColor = System.Drawing.Color.SeaGreen;
+            this.login_about.IdleBorderThickness = 1;
+            this.login_about.IdleCornerRadius = 20;
+            this.login_about.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.login_about.IdleForecolor = System.Drawing.Color.White;
+            this.login_about.IdleLineColor = System.Drawing.Color.White;
+            this.login_about.Location = new System.Drawing.Point(674, 424);
+            this.login_about.Margin = new System.Windows.Forms.Padding(5);
+            this.login_about.Name = "login_about";
+            this.login_about.Size = new System.Drawing.Size(117, 51);
+            this.login_about.TabIndex = 5;
+            this.login_about.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.login_about.Click += new System.EventHandler(this.login_about_Click);
+            // 
+            // login_loginBtn
+            // 
+            this.login_loginBtn.ActiveBorderThickness = 1;
+            this.login_loginBtn.ActiveCornerRadius = 20;
+            this.login_loginBtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.login_loginBtn.ActiveForecolor = System.Drawing.Color.White;
+            this.login_loginBtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.login_loginBtn.BackColor = System.Drawing.Color.White;
+            this.login_loginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login_loginBtn.BackgroundImage")));
+            this.login_loginBtn.ButtonText = "Login";
+            this.login_loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_loginBtn.ForeColor = System.Drawing.Color.SeaGreen;
+            this.login_loginBtn.IdleBorderThickness = 1;
+            this.login_loginBtn.IdleCornerRadius = 20;
+            this.login_loginBtn.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.login_loginBtn.IdleForecolor = System.Drawing.Color.White;
+            this.login_loginBtn.IdleLineColor = System.Drawing.Color.White;
+            this.login_loginBtn.Location = new System.Drawing.Point(823, 271);
+            this.login_loginBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.login_loginBtn.Name = "login_loginBtn";
+            this.login_loginBtn.Size = new System.Drawing.Size(98, 49);
+            this.login_loginBtn.TabIndex = 2;
+            this.login_loginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.login_loginBtn.Click += new System.EventHandler(this.login_loginBtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::IHRM.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(621, 460);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // login_exit
+            // 
+            this.login_exit.BackColor = System.Drawing.Color.SeaGreen;
+            this.login_exit.Image = ((System.Drawing.Image)(resources.GetObject("login_exit.Image")));
+            this.login_exit.ImageActive = null;
+            this.login_exit.Location = new System.Drawing.Point(913, 3);
+            this.login_exit.Name = "login_exit";
+            this.login_exit.Size = new System.Drawing.Size(25, 22);
+            this.login_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.login_exit.TabIndex = 6;
+            this.login_exit.TabStop = false;
+            this.login_exit.Zoom = 10;
+            this.login_exit.Click += new System.EventHandler(this.login_exit_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,6 +314,8 @@
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.login_menu.ResumeLayout(false);
+            this.login_picture.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.login_exit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -323,6 +339,7 @@
         private ns1.BunifuThinButton2 login_contact;
         private ns1.BunifuThinButton2 login_about;
         private ns1.BunifuThinButton2 login_reset;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

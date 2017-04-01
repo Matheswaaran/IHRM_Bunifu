@@ -46,9 +46,9 @@ namespace IHRM
             }
             try
             {
-                string pass = login_password.Text;
-                string md5pass = Utils.Global.CreateMD5(pass);
-                MySqlCommand select = new MySqlCommand("Select * FROM hrm_database.goverment_users where name = '" + login_username.Text + "' and password = '" + md5pass + "';", Utils.MySql.myConn);
+                //string pass = login_password.Text;
+                //string md5pass = Utils.Global.CreateMD5(pass);
+                MySqlCommand select = new MySqlCommand("Select * FROM hrm_database.goverment_users where name = '" + login_username.Text + "' and password = '" + login_password.Text + "';", Utils.MySql.myConn);
                 Utils.MySql.myConn.Open();
                 MySqlDataReader loginReader = select.ExecuteReader();
                 int count = 0;
@@ -86,7 +86,7 @@ namespace IHRM
 
         private void login_about_Click(object sender, EventArgs e)
         {
-            //login_username.Text = Utils.Global.CreateMD5(login_password.ToString());
+            //login_username.Text = Utils.Global.CreateMD5(login_username.ToString());
         }
     }
 }

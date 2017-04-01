@@ -362,6 +362,7 @@
             this.site_searchBtn.TabIndex = 8;
             this.site_searchBtn.TabStop = false;
             this.site_searchBtn.Zoom = 10;
+            this.site_searchBtn.Click += new System.EventHandler(this.site_searchBtn_Click);
             // 
             // site_search
             // 

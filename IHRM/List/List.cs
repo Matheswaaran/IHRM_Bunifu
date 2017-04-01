@@ -26,6 +26,36 @@ namespace IHRM.List
             Application.Exit();
         }
 
+        private void setButtonText(string tablename)
+        {
+            switch (table)
+            {
+                case "site_table":
+                    site_add.ButtonText = "Add";
+                    site_delete.ButtonText = "Delete";
+                    site_modify.ButtonText = "Modify";
+                    break;
+                case "contract_users":
+                    site_add.ButtonText = "Add";
+                    site_delete.ButtonText = "Delete";
+                    site_modify.ButtonText = "Modify";
+                    break;
+                case "supervisor_users":
+                    site_add.ButtonText = "Add";
+                    site_delete.ButtonText = "Delete";
+                    site_modify.ButtonText = "Modify";
+                    break;
+                case "employee_table":
+                    site_add.ButtonText = "Approved";
+                    site_delete.ButtonText = "Pending";
+                    site_modify.ButtonText = "Approve";
+                    break;
+                default:
+                    MessageBox.Show("Select a button from the navigation menu", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+            }
+        }
+
         private void checkbox()
         {
             //Add a CheckBox Column to the DataGridView at the first position.
@@ -39,9 +69,7 @@ namespace IHRM.List
 
         private void btn_home_Click(object sender, EventArgs e)
         {
-            site_add.Visible = true;
-            site_delete.Visible = true;
-            site_modify.Visible = true;
+            
             MySqlCommand listSite = new MySqlCommand("SELECT sid,name,address,district,state from hrm_database.site_table;", Utils.MySql.myConn);
             try
             {
@@ -55,6 +83,7 @@ namespace IHRM.List
                 site_Datagrid.DataSource = bSource;
                 sda.Update(dt);
                 table = "site_table";
+                setButtonText(table);
             }
             catch (Exception ex)
             {
@@ -68,14 +97,11 @@ namespace IHRM.List
 
         private void btn_contract_Click(object sender, EventArgs e)
         {
-            site_add.Visible = true;
-            site_delete.Visible = true;
-            site_modify.Visible = true;
-            MySqlCommand listSite = new MySqlCommand("SELECT cid,name,email,aadhar_uid,gid from hrm_database.contract_users;", Utils.MySql.myConn);
+            MySqlCommand listContract = new MySqlCommand("SELECT cid,name,email,aadhar_uid,gid from hrm_database.contract_users;", Utils.MySql.myConn);
             try
             {
                 MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = listSite;
+                sda.SelectCommand = listContract;
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 BindingSource bSource = new BindingSource();
@@ -84,6 +110,7 @@ namespace IHRM.List
                 site_Datagrid.DataSource = bSource;
                 sda.Update(dt);
                 table = "contract_users";
+                setButtonText(table);
             }
             catch (Exception ex)
             {
@@ -106,14 +133,11 @@ namespace IHRM.List
 
         private void btn_supervisour_Click(object sender, EventArgs e)
         {
-            site_add.Visible = true;
-            site_delete.Visible = true;
-            site_modify.Visible = true;
-            MySqlCommand listSite = new MySqlCommand("SELECT su_id,name,email,aadhar_uid,gid from hrm_database.supervisour_users;", Utils.MySql.myConn);
+            MySqlCommand listSuper = new MySqlCommand("SELECT su_id,name,email,aadhar_uid,gid from hrm_database.supervisor_users;", Utils.MySql.myConn);
             try
             {
                 MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = listSite;
+                sda.SelectCommand = listSuper;
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 BindingSource bSource = new BindingSource();
@@ -121,7 +145,8 @@ namespace IHRM.List
                 bSource.DataSource = dt;
                 site_Datagrid.DataSource = bSource; 
                 sda.Update(dt);
-                table = "supervisour_users";
+                table = "supervisor_users";
+                setButtonText(table);
             }
             catch (Exception ex)
             {
@@ -135,14 +160,11 @@ namespace IHRM.List
 
         private void btn_employee_Click(object sender, EventArgs e)
         {
-            site_add.Visible = false;
-            site_delete.Visible = false;
-            site_modify.Visible = false;
-            MySqlCommand listSite = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table;", Utils.MySql.myConn);
+            MySqlCommand listEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table;", Utils.MySql.myConn);
             try
             {
                 MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = listSite;
+                sda.SelectCommand = listEmployee;
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 BindingSource bSource = new BindingSource();
@@ -151,6 +173,7 @@ namespace IHRM.List
                 site_Datagrid.DataSource = bSource;
                 sda.Update(dt);
                 table = "employee_table";
+                setButtonText(table);
             }
             catch (Exception ex)
             {
@@ -195,9 +218,34 @@ namespace IHRM.List
                     Data.Add_Contract addContract = new Data.Add_Contract();
                     addContract.Show();
                     break;
-                case "supervisour_users":
+                case "supervisor_users":
                     Data.Add_Super addSuper = new Data.Add_Super();
                     addSuper.Show();
+                    break;
+                case "employee_table":
+                    MySqlCommand approvedEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where auth = 1;", Utils.MySql.myConn);
+                    try
+                    {
+                        MySqlDataAdapter sda = new MySqlDataAdapter();
+                        sda.SelectCommand = approvedEmployee;
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        BindingSource bSource = new BindingSource();
+
+                        bSource.DataSource = dt;
+                        site_Datagrid.DataSource = bSource;
+                        sda.Update(dt);
+                        //table = "employee_table";
+                        //setButtonText(table);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    if (check == false)
+                    {
+                        checkbox();
+                    }
                     break;
                 default:
                     MessageBox.Show("Select a button from the navigation menu", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -223,6 +271,7 @@ namespace IHRM.List
                     }
                     MessageBox.Show("Selected Values" + message);
                     break;
+
                 case "contract_users":
                     //string message = string.Empty;
                     foreach (DataGridViewRow row in site_Datagrid.Rows)
@@ -236,7 +285,8 @@ namespace IHRM.List
                     }
                     MessageBox.Show("Selected Values" + message);
                     break;
-                case "supervisour_users":
+
+                case "supervisor_users":
                     //string message = string.Empty;
                     foreach (DataGridViewRow row in site_Datagrid.Rows)
                     {
@@ -249,10 +299,48 @@ namespace IHRM.List
                     }
                     MessageBox.Show("Selected Values" + message);
                     break;
+
+                case "employee_table":
+                    MySqlCommand pendingEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where auth = 0;", Utils.MySql.myConn);
+                    try
+                    {
+                        MySqlDataAdapter sda = new MySqlDataAdapter();
+                        sda.SelectCommand = pendingEmployee;
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        BindingSource bSource = new BindingSource();
+
+                        bSource.DataSource = dt;
+                        site_Datagrid.DataSource = bSource;
+                        sda.Update(dt);
+                        //table = "employee_table";
+                        //setButtonText(table);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    if (check == false)
+                    {
+                        checkbox();
+                    }
+                    break;
+
                 default:
                     MessageBox.Show("Select a button from the navigation menu", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
         }
+
+        private void site_searchBtn_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(site_search.Text);
+            switch (table)
+            {
+                case "site_table":
+                    
+                    break;
+            }
+            }
     }
 }
