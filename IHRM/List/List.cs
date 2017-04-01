@@ -67,12 +67,40 @@ namespace IHRM.List
             check = true;
         }
 
+        //private void setDatagrid(MySqlCommand query)
+        //{
+        //    MySqlDataAdapter sda = new MySqlDataAdapter();
+        //    sda.SelectCommand = query;
+        //    DataTable dt = new DataTable();
+        //    sda.Fill(dt);
+        //    BindingSource bSource = new BindingSource();
+
+        //    bSource.DataSource = dt;
+        //    site_Datagrid.DataSource = bSource;
+        //    sda.Update(dt);
+        //}
+
+        //private void setDatagridTable(MySqlCommand query, string table)
+        //{
+        //    MySqlDataAdapter sda = new MySqlDataAdapter();
+        //    sda.SelectCommand = query;
+        //    DataTable dt = new DataTable();
+        //    sda.Fill(dt);
+        //    BindingSource bSource = new BindingSource();
+
+        //    bSource.DataSource = dt;
+        //    site_Datagrid.DataSource = bSource;
+        //    sda.Update(dt);
+        //    setButtonText(table);
+        //}
+
         private void btn_home_Click(object sender, EventArgs e)
         {
             
             MySqlCommand listSite = new MySqlCommand("SELECT sid,name,address,district,state from hrm_database.site_table;", Utils.MySql.myConn);
             try
             {
+                //setDatagridTable(listSite, "site_table");
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 sda.SelectCommand = listSite;
                 DataTable dt = new DataTable();
@@ -100,6 +128,7 @@ namespace IHRM.List
             MySqlCommand listContract = new MySqlCommand("SELECT cid,name,email,aadhar_uid,gid from hrm_database.contract_users;", Utils.MySql.myConn);
             try
             {
+                //setDatagridTable(listContract, "contract_users");
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 sda.SelectCommand = listContract;
                 DataTable dt = new DataTable();
@@ -255,51 +284,50 @@ namespace IHRM.List
 
         private void site_delete_Click(object sender, EventArgs e)
         {
-            string message = string.Empty;
             switch (table)
             {
                 case "site_table":
-                    //string message = string.Empty;
+                    string messageSite = string.Empty;
                     foreach (DataGridViewRow row in site_Datagrid.Rows)
                     {
                         bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
                         if (isSelected)
                         {
-                            message += Environment.NewLine;
-                            message += row.Cells["Name"].Value.ToString();
+                            messageSite += Environment.NewLine;
+                            messageSite += row.Cells["name"].Value.ToString();
                         }
                     }
-                    MessageBox.Show("Selected Values" + message);
+                    MessageBox.Show("Selected Values" + string.Empty);
                     break;
 
                 case "contract_users":
-                    //string message = string.Empty;
+                    string msgContract = string.Empty;
                     foreach (DataGridViewRow row in site_Datagrid.Rows)
                     {
                         bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
                         if (isSelected)
                         {
-                            message += Environment.NewLine;
-                            message += row.Cells["Name"].Value.ToString();
+                            msgContract += Environment.NewLine;
+                            msgContract += row.Cells["name"].Value.ToString();
                         }
                     }
-                    MessageBox.Show("Selected Values" + message);
+                    MessageBox.Show("Selected Values" + msgContract);
                     break;
 
                 case "supervisor_users":
-                    //string message = string.Empty;
+                    string messageSuper = string.Empty;
                     foreach (DataGridViewRow row in site_Datagrid.Rows)
                     {
                         bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
                         if (isSelected)
                         {
-                            message += Environment.NewLine;
-                            message += row.Cells["Name"].Value.ToString();
+                            messageSuper += Environment.NewLine;
+                            messageSuper += row.Cells["name"].Value.ToString();
                         }
                     }
-                    MessageBox.Show("Selected Values" + message);
+                    MessageBox.Show("Selected Values" + messageSuper);
                     break;
-
+                    
                 case "employee_table":
                     MySqlCommand pendingEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where auth = 0;", Utils.MySql.myConn);
                     try
@@ -334,13 +362,126 @@ namespace IHRM.List
 
         private void site_searchBtn_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(site_search.Text);
+            //int id = int.Parse(site_search.Text);
+            if (string.IsNullOrEmpty(site_search.Text))
+            {
+                MessageBox.Show("Please enter an ID to search.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                site_search.Focus();
+                return;
+            }
+            foreach(char c in site_search.Text)
+            {
+                if (!Char.IsNumber(c))
+                {
+                    MessageBox.Show("The value of the ID should be a Number", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    site_search.Focus();
+                    return;
+                }
+            }
             switch (table)
             {
                 case "site_table":
-                    
+                    MySqlCommand searchSite = new MySqlCommand("SELECT sid,name,address,district,state from hrm_database.site_table where sid =" + int.Parse(site_search.Text) + ";", Utils.MySql.myConn);
+                    try
+                    {
+                        MySqlDataAdapter sda = new MySqlDataAdapter();
+                        sda.SelectCommand = searchSite;
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        BindingSource bSource = new BindingSource();
+
+                        bSource.DataSource = dt;
+                        site_Datagrid.DataSource = bSource;
+                        sda.Update(dt);
+                        //table = "employee_table";
+                        //setButtonText(table);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    if (check == false)
+                    {
+                        checkbox();
+                    }
+                    break;
+
+                case "contract_users":
+                    MySqlCommand searchContract = new MySqlCommand("SELECT cid,name,email,aadhar_uid,gid from hrm_database.contract_users where cid =" + int.Parse(site_search.Text) + ";", Utils.MySql.myConn);
+                    try
+                    {
+                        MySqlDataAdapter sda = new MySqlDataAdapter();
+                        sda.SelectCommand = searchContract;
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        BindingSource bSource = new BindingSource();
+
+                        bSource.DataSource = dt;
+                        site_Datagrid.DataSource = bSource;
+                        sda.Update(dt);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    if (check == false)
+                    {
+                        checkbox();
+                    }
+                    break;
+
+                case "supervisor_users":
+                    MySqlCommand searchSupervisor = new MySqlCommand("SELECT su_id,name,email,aadhar_uid,gid from hrm_database.supervisor_users where su_id =" + int.Parse(site_search.Text) + ";", Utils.MySql.myConn);
+                    try
+                    {
+                        MySqlDataAdapter sda = new MySqlDataAdapter();
+                        sda.SelectCommand = searchSupervisor;
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        BindingSource bSource = new BindingSource();
+
+                        bSource.DataSource = dt;
+                        site_Datagrid.DataSource = bSource;
+                        sda.Update(dt);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    if (check == false)
+                    {
+                        checkbox();
+                    }
+                    break;
+
+                case "employee_table":
+                    MySqlCommand searchEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where eid =" + int.Parse(site_search.Text) + ";", Utils.MySql.myConn);
+                    try
+                    {
+                        MySqlDataAdapter sda = new MySqlDataAdapter();
+                        sda.SelectCommand = searchEmployee;
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        BindingSource bSource = new BindingSource();
+
+                        bSource.DataSource = dt;
+                        site_Datagrid.DataSource = bSource;
+                        sda.Update(dt);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    if (check == false)
+                    {
+                        checkbox();
+                    }
+                    break;
+
+                default:
+                    MessageBox.Show("Select a button from the navigation menu", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
-            }
+        }
     }
 }
