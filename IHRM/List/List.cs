@@ -527,5 +527,11 @@ namespace IHRM.List
                 checkbox();
             }
         }
+
+        private void btn_setting_Click(object sender, EventArgs e)
+        {
+            settings set = new settings();
+            set.Show();
+        }
     }
 }

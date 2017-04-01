@@ -75,6 +75,12 @@
     <Compile Include="List\List.Designer.cs">
       <DependentUpon>List.cs</DependentUpon>
     </Compile>
+    <Compile Include="List\settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\settings.Designer.cs">
+      <DependentUpon>settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="List\List.resx">
       <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\settings.resx">
+      <DependentUpon>settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
