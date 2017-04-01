@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(List));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.panel_navigation = new System.Windows.Forms.Panel();
             this.btn_logout = new ns1.BunifuFlatButton();
@@ -84,7 +84,7 @@
             // btn_logout
             // 
             this.btn_logout.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_logout.BackColor = System.Drawing.Color.White;
             this.btn_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_logout.BorderRadius = 0;
             this.btn_logout.ButtonText = " Logout";
@@ -101,25 +101,25 @@
             this.btn_logout.IconRightZoom = 0D;
             this.btn_logout.IconVisible = true;
             this.btn_logout.IconZoom = 90D;
-            this.btn_logout.IsTab = false;
-            this.btn_logout.Location = new System.Drawing.Point(12, 405);
+            this.btn_logout.IsTab = true;
+            this.btn_logout.Location = new System.Drawing.Point(0, 405);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_logout.Normalcolor = System.Drawing.Color.White;
             this.btn_logout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_logout.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_logout.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_logout.selected = false;
-            this.btn_logout.Size = new System.Drawing.Size(186, 48);
+            this.btn_logout.Size = new System.Drawing.Size(198, 48);
             this.btn_logout.TabIndex = 15;
             this.btn_logout.Text = " Logout";
             this.btn_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logout.Textcolor = System.Drawing.Color.White;
+            this.btn_logout.Textcolor = System.Drawing.Color.Black;
             this.btn_logout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // btn_setting
             // 
             this.btn_setting.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_setting.BackColor = System.Drawing.Color.White;
             this.btn_setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_setting.BorderRadius = 0;
             this.btn_setting.ButtonText = " Settings";
@@ -136,24 +136,24 @@
             this.btn_setting.IconRightZoom = 0D;
             this.btn_setting.IconVisible = true;
             this.btn_setting.IconZoom = 90D;
-            this.btn_setting.IsTab = false;
-            this.btn_setting.Location = new System.Drawing.Point(12, 351);
+            this.btn_setting.IsTab = true;
+            this.btn_setting.Location = new System.Drawing.Point(0, 351);
             this.btn_setting.Name = "btn_setting";
-            this.btn_setting.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_setting.Normalcolor = System.Drawing.Color.White;
             this.btn_setting.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_setting.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_setting.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_setting.selected = false;
-            this.btn_setting.Size = new System.Drawing.Size(186, 48);
+            this.btn_setting.Size = new System.Drawing.Size(198, 48);
             this.btn_setting.TabIndex = 14;
             this.btn_setting.Text = " Settings";
             this.btn_setting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_setting.Textcolor = System.Drawing.Color.White;
+            this.btn_setting.Textcolor = System.Drawing.Color.Black;
             this.btn_setting.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_empAttendance
             // 
             this.btn_empAttendance.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_empAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_empAttendance.BackColor = System.Drawing.Color.White;
             this.btn_empAttendance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_empAttendance.BorderRadius = 0;
             this.btn_empAttendance.ButtonText = " Employee Attendance";
@@ -170,25 +170,25 @@
             this.btn_empAttendance.IconRightZoom = 0D;
             this.btn_empAttendance.IconVisible = true;
             this.btn_empAttendance.IconZoom = 90D;
-            this.btn_empAttendance.IsTab = false;
-            this.btn_empAttendance.Location = new System.Drawing.Point(13, 297);
+            this.btn_empAttendance.IsTab = true;
+            this.btn_empAttendance.Location = new System.Drawing.Point(0, 297);
             this.btn_empAttendance.Name = "btn_empAttendance";
-            this.btn_empAttendance.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_empAttendance.Normalcolor = System.Drawing.Color.White;
             this.btn_empAttendance.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_empAttendance.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_empAttendance.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_empAttendance.selected = false;
-            this.btn_empAttendance.Size = new System.Drawing.Size(185, 48);
+            this.btn_empAttendance.Size = new System.Drawing.Size(198, 48);
             this.btn_empAttendance.TabIndex = 13;
             this.btn_empAttendance.Text = " Employee Attendance";
             this.btn_empAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_empAttendance.Textcolor = System.Drawing.Color.White;
+            this.btn_empAttendance.Textcolor = System.Drawing.Color.Black;
             this.btn_empAttendance.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_empAttendance.Click += new System.EventHandler(this.btn_empAttendance_Click);
             // 
             // btn_employee
             // 
             this.btn_employee.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_employee.BackColor = System.Drawing.Color.White;
             this.btn_employee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_employee.BorderRadius = 0;
             this.btn_employee.ButtonText = " Employee List";
@@ -205,25 +205,25 @@
             this.btn_employee.IconRightZoom = 0D;
             this.btn_employee.IconVisible = true;
             this.btn_employee.IconZoom = 90D;
-            this.btn_employee.IsTab = false;
-            this.btn_employee.Location = new System.Drawing.Point(13, 243);
+            this.btn_employee.IsTab = true;
+            this.btn_employee.Location = new System.Drawing.Point(0, 243);
             this.btn_employee.Name = "btn_employee";
-            this.btn_employee.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_employee.Normalcolor = System.Drawing.Color.White;
             this.btn_employee.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_employee.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_employee.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_employee.selected = false;
-            this.btn_employee.Size = new System.Drawing.Size(186, 48);
+            this.btn_employee.Size = new System.Drawing.Size(199, 48);
             this.btn_employee.TabIndex = 12;
             this.btn_employee.Text = " Employee List";
             this.btn_employee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_employee.Textcolor = System.Drawing.Color.White;
+            this.btn_employee.Textcolor = System.Drawing.Color.Black;
             this.btn_employee.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_employee.Click += new System.EventHandler(this.btn_employee_Click);
             // 
             // btn_supervisour
             // 
             this.btn_supervisour.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_supervisour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_supervisour.BackColor = System.Drawing.Color.White;
             this.btn_supervisour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_supervisour.BorderRadius = 0;
             this.btn_supervisour.ButtonText = "Supervisor List";
@@ -240,25 +240,25 @@
             this.btn_supervisour.IconRightZoom = 0D;
             this.btn_supervisour.IconVisible = true;
             this.btn_supervisour.IconZoom = 90D;
-            this.btn_supervisour.IsTab = false;
-            this.btn_supervisour.Location = new System.Drawing.Point(12, 189);
+            this.btn_supervisour.IsTab = true;
+            this.btn_supervisour.Location = new System.Drawing.Point(0, 189);
             this.btn_supervisour.Name = "btn_supervisour";
-            this.btn_supervisour.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_supervisour.Normalcolor = System.Drawing.Color.White;
             this.btn_supervisour.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_supervisour.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_supervisour.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_supervisour.selected = false;
-            this.btn_supervisour.Size = new System.Drawing.Size(186, 48);
+            this.btn_supervisour.Size = new System.Drawing.Size(198, 48);
             this.btn_supervisour.TabIndex = 11;
             this.btn_supervisour.Text = "Supervisor List";
             this.btn_supervisour.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_supervisour.Textcolor = System.Drawing.Color.White;
+            this.btn_supervisour.Textcolor = System.Drawing.Color.Black;
             this.btn_supervisour.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_supervisour.Click += new System.EventHandler(this.btn_supervisour_Click);
             // 
             // btn_contract
             // 
             this.btn_contract.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_contract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_contract.BackColor = System.Drawing.Color.White;
             this.btn_contract.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_contract.BorderRadius = 0;
             this.btn_contract.ButtonText = "Contractor List";
@@ -275,25 +275,25 @@
             this.btn_contract.IconRightZoom = 0D;
             this.btn_contract.IconVisible = true;
             this.btn_contract.IconZoom = 90D;
-            this.btn_contract.IsTab = false;
-            this.btn_contract.Location = new System.Drawing.Point(12, 135);
+            this.btn_contract.IsTab = true;
+            this.btn_contract.Location = new System.Drawing.Point(0, 135);
             this.btn_contract.Name = "btn_contract";
-            this.btn_contract.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_contract.Normalcolor = System.Drawing.Color.White;
             this.btn_contract.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_contract.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_contract.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_contract.selected = false;
-            this.btn_contract.Size = new System.Drawing.Size(186, 48);
+            this.btn_contract.Size = new System.Drawing.Size(198, 48);
             this.btn_contract.TabIndex = 10;
             this.btn_contract.Text = "Contractor List";
             this.btn_contract.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_contract.Textcolor = System.Drawing.Color.White;
+            this.btn_contract.Textcolor = System.Drawing.Color.Black;
             this.btn_contract.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_contract.Click += new System.EventHandler(this.btn_contract_Click);
             // 
             // btn_home
             // 
             this.btn_home.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_home.BackColor = System.Drawing.Color.White;
             this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_home.BorderRadius = 0;
             this.btn_home.ButtonText = "Site List";
@@ -310,18 +310,18 @@
             this.btn_home.IconRightZoom = 0D;
             this.btn_home.IconVisible = true;
             this.btn_home.IconZoom = 90D;
-            this.btn_home.IsTab = false;
-            this.btn_home.Location = new System.Drawing.Point(12, 81);
+            this.btn_home.IsTab = true;
+            this.btn_home.Location = new System.Drawing.Point(0, 81);
             this.btn_home.Name = "btn_home";
-            this.btn_home.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_home.Normalcolor = System.Drawing.Color.White;
             this.btn_home.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_home.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_home.selected = false;
-            this.btn_home.Size = new System.Drawing.Size(186, 48);
+            this.btn_home.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_home.selected = true;
+            this.btn_home.Size = new System.Drawing.Size(198, 48);
             this.btn_home.TabIndex = 9;
             this.btn_home.Text = "Site List";
             this.btn_home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_home.Textcolor = System.Drawing.Color.White;
+            this.btn_home.Textcolor = System.Drawing.Color.Black;
             this.btn_home.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
@@ -387,21 +387,21 @@
             // 
             this.site_Datagrid.AllowUserToAddRows = false;
             this.site_Datagrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.site_Datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.site_Datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.site_Datagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.site_Datagrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.site_Datagrid.BackgroundColor = System.Drawing.Color.White;
             this.site_Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.site_Datagrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.site_Datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.site_Datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.site_Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.site_Datagrid.DoubleBuffered = true;
             this.site_Datagrid.EnableHeadersVisualStyles = false;

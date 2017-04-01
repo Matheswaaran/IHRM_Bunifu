@@ -32,7 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.login_menu = new System.Windows.Forms.Panel();
+            this.login_exit = new ns1.BunifuImageButton();
             this.login_picture = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.login_username = new ns1.BunifuMaterialTextbox();
             this.login_password = new ns1.BunifuMaterialTextbox();
             this.login_label2 = new ns1.BunifuCustomLabel();
@@ -44,12 +46,11 @@
             this.login_contact = new ns1.BunifuThinButton2();
             this.login_about = new ns1.BunifuThinButton2();
             this.login_loginBtn = new ns1.BunifuThinButton2();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.login_exit = new ns1.BunifuImageButton();
+            this.enter = new System.Windows.Forms.Button();
             this.login_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.login_exit)).BeginInit();
             this.login_picture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.login_exit)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -67,6 +68,20 @@
             this.login_menu.Size = new System.Drawing.Size(941, 29);
             this.login_menu.TabIndex = 0;
             // 
+            // login_exit
+            // 
+            this.login_exit.BackColor = System.Drawing.Color.SeaGreen;
+            this.login_exit.Image = ((System.Drawing.Image)(resources.GetObject("login_exit.Image")));
+            this.login_exit.ImageActive = null;
+            this.login_exit.Location = new System.Drawing.Point(913, 3);
+            this.login_exit.Name = "login_exit";
+            this.login_exit.Size = new System.Drawing.Size(25, 22);
+            this.login_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.login_exit.TabIndex = 6;
+            this.login_exit.TabStop = false;
+            this.login_exit.Zoom = 10;
+            this.login_exit.Click += new System.EventHandler(this.login_exit_Click);
+            // 
             // login_picture
             // 
             this.login_picture.Controls.Add(this.pictureBox1);
@@ -75,6 +90,16 @@
             this.login_picture.Name = "login_picture";
             this.login_picture.Size = new System.Drawing.Size(621, 460);
             this.login_picture.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::IHRM.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(621, 460);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // login_username
             // 
@@ -265,36 +290,24 @@
             this.login_loginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.login_loginBtn.Click += new System.EventHandler(this.login_loginBtn_Click);
             // 
-            // pictureBox1
+            // enter
             // 
-            this.pictureBox1.Image = global::IHRM.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(621, 460);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // login_exit
-            // 
-            this.login_exit.BackColor = System.Drawing.Color.SeaGreen;
-            this.login_exit.Image = ((System.Drawing.Image)(resources.GetObject("login_exit.Image")));
-            this.login_exit.ImageActive = null;
-            this.login_exit.Location = new System.Drawing.Point(913, 3);
-            this.login_exit.Name = "login_exit";
-            this.login_exit.Size = new System.Drawing.Size(25, 22);
-            this.login_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.login_exit.TabIndex = 6;
-            this.login_exit.TabStop = false;
-            this.login_exit.Zoom = 10;
-            this.login_exit.Click += new System.EventHandler(this.login_exit_Click);
+            this.enter.Location = new System.Drawing.Point(653, 330);
+            this.enter.Name = "enter";
+            this.enter.Size = new System.Drawing.Size(0, 0);
+            this.enter.TabIndex = 1;
+            this.enter.Text = " login";
+            this.enter.UseVisualStyleBackColor = true;
+            this.enter.Click += new System.EventHandler(this.enter_Click);
             // 
             // Login
             // 
+            this.AcceptButton = this.enter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(941, 489);
+            this.Controls.Add(this.enter);
             this.Controls.Add(this.login_reset);
             this.Controls.Add(this.login_contact);
             this.Controls.Add(this.login_about);
@@ -314,9 +327,9 @@
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.login_menu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.login_exit)).EndInit();
             this.login_picture.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.login_exit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,6 +353,7 @@
         private ns1.BunifuThinButton2 login_about;
         private ns1.BunifuThinButton2 login_reset;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button enter;
     }
 }
 
