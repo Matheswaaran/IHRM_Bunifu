@@ -34,21 +34,25 @@ namespace IHRM.List
                     site_add.ButtonText = "Add";
                     site_delete.ButtonText = "Delete";
                     site_modify.ButtonText = "Modify";
+                    site_modify.Visible = false;
                     break;
                 case "contract_users":
                     site_add.ButtonText = "Add";
                     site_delete.ButtonText = "Delete";
                     site_modify.ButtonText = "Modify";
+                    site_modify.Visible = false;
                     break;
                 case "supervisor_users":
                     site_add.ButtonText = "Add";
                     site_delete.ButtonText = "Delete";
                     site_modify.ButtonText = "Modify";
+                    site_modify.Visible = false;
                     break;
                 case "employee_table":
                     site_add.ButtonText = "Approved";
                     site_delete.ButtonText = "Pending";
                     site_modify.ButtonText = "Approve";
+                    site_modify.Visible = true;
                     break;
                 default:
                     MessageBox.Show("Select a button from the navigation menu", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);

@@ -433,6 +433,7 @@
             this.site_modify.Size = new System.Drawing.Size(98, 49);
             this.site_modify.TabIndex = 5;
             this.site_modify.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.site_modify.Visible = false;
             // 
             // site_delete
             // 
