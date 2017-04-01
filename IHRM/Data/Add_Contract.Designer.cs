@@ -50,6 +50,8 @@
             this.add_contract_add = new ns1.BunifuThinButton2();
             this.add_Contract_password = new ns1.BunifuMaterialTextbox();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
+            this.add_Contract_siteId = new ns1.BunifuMaterialTextbox();
+            this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.panel_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.add_contract_exit)).BeginInit();
             this.SuspendLayout();
@@ -119,7 +121,7 @@
             this.add_Contract_email.LineIdleColor = System.Drawing.Color.Gray;
             this.add_Contract_email.LineMouseHoverColor = System.Drawing.Color.Green;
             this.add_Contract_email.LineThickness = 3;
-            this.add_Contract_email.Location = new System.Drawing.Point(147, 286);
+            this.add_Contract_email.Location = new System.Drawing.Point(147, 288);
             this.add_Contract_email.Margin = new System.Windows.Forms.Padding(4);
             this.add_Contract_email.Name = "add_Contract_email";
             this.add_Contract_email.Size = new System.Drawing.Size(268, 31);
@@ -355,11 +357,42 @@
             this.bunifuCustomLabel1.TabIndex = 42;
             this.bunifuCustomLabel1.Text = "Password";
             // 
+            // add_Contract_siteId
+            // 
+            this.add_Contract_siteId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.add_Contract_siteId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.add_Contract_siteId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.add_Contract_siteId.HintForeColor = System.Drawing.Color.Empty;
+            this.add_Contract_siteId.HintText = "";
+            this.add_Contract_siteId.isPassword = false;
+            this.add_Contract_siteId.LineFocusedColor = System.Drawing.Color.Green;
+            this.add_Contract_siteId.LineIdleColor = System.Drawing.Color.Gray;
+            this.add_Contract_siteId.LineMouseHoverColor = System.Drawing.Color.Green;
+            this.add_Contract_siteId.LineThickness = 3;
+            this.add_Contract_siteId.Location = new System.Drawing.Point(147, 361);
+            this.add_Contract_siteId.Margin = new System.Windows.Forms.Padding(4);
+            this.add_Contract_siteId.Name = "add_Contract_siteId";
+            this.add_Contract_siteId.Size = new System.Drawing.Size(268, 31);
+            this.add_Contract_siteId.TabIndex = 45;
+            this.add_Contract_siteId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(15, 361);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(87, 29);
+            this.bunifuCustomLabel2.TabIndex = 44;
+            this.bunifuCustomLabel2.Text = "Site ID";
+            // 
             // Add_Contract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 497);
+            this.Controls.Add(this.add_Contract_siteId);
+            this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.add_Contract_password);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.add_contract_label5);
@@ -410,5 +443,7 @@
         private ns1.BunifuCustomLabel add_contract_title;
         private ns1.BunifuMaterialTextbox add_Contract_password;
         private ns1.BunifuCustomLabel bunifuCustomLabel1;
+        private ns1.BunifuMaterialTextbox add_Contract_siteId;
+        private ns1.BunifuCustomLabel bunifuCustomLabel2;
     }
 }

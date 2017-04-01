@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(List));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.panel_navigation = new System.Windows.Forms.Panel();
             this.btn_logout = new ns1.BunifuFlatButton();
             this.btn_setting = new ns1.BunifuFlatButton();
-            this.btn_empVerification = new ns1.BunifuFlatButton();
+            this.btn_empAttendance = new ns1.BunifuFlatButton();
             this.btn_employee = new ns1.BunifuFlatButton();
             this.btn_supervisour = new ns1.BunifuFlatButton();
             this.btn_contract = new ns1.BunifuFlatButton();
@@ -69,7 +69,7 @@
             this.panel_navigation.BackColor = System.Drawing.Color.White;
             this.panel_navigation.Controls.Add(this.btn_logout);
             this.panel_navigation.Controls.Add(this.btn_setting);
-            this.panel_navigation.Controls.Add(this.btn_empVerification);
+            this.panel_navigation.Controls.Add(this.btn_empAttendance);
             this.panel_navigation.Controls.Add(this.btn_employee);
             this.panel_navigation.Controls.Add(this.btn_supervisour);
             this.panel_navigation.Controls.Add(this.btn_contract);
@@ -150,40 +150,40 @@
             this.btn_setting.Textcolor = System.Drawing.Color.White;
             this.btn_setting.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // btn_empVerification
+            // btn_empAttendance
             // 
-            this.btn_empVerification.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_empVerification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_empVerification.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_empVerification.BorderRadius = 0;
-            this.btn_empVerification.ButtonText = " Employee Verfication";
-            this.btn_empVerification.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_empVerification.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_empVerification.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_empVerification.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_empVerification.Iconimage")));
-            this.btn_empVerification.Iconimage_right = null;
-            this.btn_empVerification.Iconimage_right_Selected = null;
-            this.btn_empVerification.Iconimage_Selected = null;
-            this.btn_empVerification.IconMarginLeft = 0;
-            this.btn_empVerification.IconMarginRight = 0;
-            this.btn_empVerification.IconRightVisible = true;
-            this.btn_empVerification.IconRightZoom = 0D;
-            this.btn_empVerification.IconVisible = true;
-            this.btn_empVerification.IconZoom = 90D;
-            this.btn_empVerification.IsTab = false;
-            this.btn_empVerification.Location = new System.Drawing.Point(13, 297);
-            this.btn_empVerification.Name = "btn_empVerification";
-            this.btn_empVerification.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_empVerification.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_empVerification.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_empVerification.selected = false;
-            this.btn_empVerification.Size = new System.Drawing.Size(185, 48);
-            this.btn_empVerification.TabIndex = 13;
-            this.btn_empVerification.Text = " Employee Verfication";
-            this.btn_empVerification.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_empVerification.Textcolor = System.Drawing.Color.White;
-            this.btn_empVerification.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_empVerification.Click += new System.EventHandler(this.btn_empVerification_Click);
+            this.btn_empAttendance.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_empAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_empAttendance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_empAttendance.BorderRadius = 0;
+            this.btn_empAttendance.ButtonText = " Employee Attendance";
+            this.btn_empAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_empAttendance.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_empAttendance.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_empAttendance.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_empAttendance.Iconimage")));
+            this.btn_empAttendance.Iconimage_right = null;
+            this.btn_empAttendance.Iconimage_right_Selected = null;
+            this.btn_empAttendance.Iconimage_Selected = null;
+            this.btn_empAttendance.IconMarginLeft = 0;
+            this.btn_empAttendance.IconMarginRight = 0;
+            this.btn_empAttendance.IconRightVisible = true;
+            this.btn_empAttendance.IconRightZoom = 0D;
+            this.btn_empAttendance.IconVisible = true;
+            this.btn_empAttendance.IconZoom = 90D;
+            this.btn_empAttendance.IsTab = false;
+            this.btn_empAttendance.Location = new System.Drawing.Point(13, 297);
+            this.btn_empAttendance.Name = "btn_empAttendance";
+            this.btn_empAttendance.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_empAttendance.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_empAttendance.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_empAttendance.selected = false;
+            this.btn_empAttendance.Size = new System.Drawing.Size(185, 48);
+            this.btn_empAttendance.TabIndex = 13;
+            this.btn_empAttendance.Text = " Employee Attendance";
+            this.btn_empAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_empAttendance.Textcolor = System.Drawing.Color.White;
+            this.btn_empAttendance.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_empAttendance.Click += new System.EventHandler(this.btn_empAttendance_Click);
             // 
             // btn_employee
             // 
@@ -387,21 +387,21 @@
             // 
             this.site_Datagrid.AllowUserToAddRows = false;
             this.site_Datagrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.site_Datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.site_Datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.site_Datagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.site_Datagrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.site_Datagrid.BackgroundColor = System.Drawing.Color.White;
             this.site_Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.site_Datagrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.site_Datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.site_Datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.site_Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.site_Datagrid.DoubleBuffered = true;
             this.site_Datagrid.EnableHeadersVisualStyles = false;
@@ -556,7 +556,7 @@
         private ns1.BunifuFlatButton btn_contract;
         private ns1.BunifuFlatButton btn_supervisour;
         private ns1.BunifuFlatButton btn_setting;
-        private ns1.BunifuFlatButton btn_empVerification;
+        private ns1.BunifuFlatButton btn_empAttendance;
         private ns1.BunifuFlatButton btn_employee;
         private ns1.BunifuFlatButton btn_logout;
         private System.Windows.Forms.Panel panel_menu;
