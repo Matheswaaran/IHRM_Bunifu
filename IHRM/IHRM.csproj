@@ -121,7 +121,6 @@
     <EmbeddedResource Include="Sample\Panel.resx">
       <DependentUpon>Panel.cs</DependentUpon>
     </EmbeddedResource>
-    <Fakes Include="Fakes\MySql.Data.fakes" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
