@@ -385,6 +385,8 @@
             // 
             // site_Datagrid
             // 
+            this.site_Datagrid.AllowUserToAddRows = false;
+            this.site_Datagrid.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.site_Datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.site_Datagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -437,6 +439,7 @@
             this.site_modify.TabIndex = 5;
             this.site_modify.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.site_modify.Visible = false;
+            this.site_modify.Click += new System.EventHandler(this.site_modify_Click);
             // 
             // site_delete
             // 

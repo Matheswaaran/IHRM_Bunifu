@@ -60,11 +60,11 @@ namespace IHRM.List
             }
         }
 
-        private void checkbox()
+        public void checkbox()
         {
             //Add a CheckBox Column to the DataGridView at the first position.
             DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
-            checkBoxColumn.HeaderText = "";
+            checkBoxColumn.HeaderText = "Select";
             checkBoxColumn.Width = 30;
             checkBoxColumn.Name = "checkBoxColumn";
             site_Datagrid.Columns.Insert(0, checkBoxColumn);
@@ -268,8 +268,6 @@ namespace IHRM.List
                         bSource.DataSource = dt;
                         site_Datagrid.DataSource = bSource;
                         sda.Update(dt);
-                        //table = "employee_table";
-                        //setButtonText(table);
                     }
                     catch (Exception ex)
                     {
@@ -288,50 +286,54 @@ namespace IHRM.List
 
         private void site_delete_Click(object sender, EventArgs e)
         {
+            DataGridViewCheckBoxCell checkboxCell;
             switch (table)
             {
                 case "site_table":
-                    string messageSite = string.Empty;
                     foreach (DataGridViewRow row in site_Datagrid.Rows)
                     {
-                        bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
-                        if (isSelected)
+                        checkboxCell = row.Cells[0] as DataGridViewCheckBoxCell;
+                        bool isSelected = (null != checkboxCell && null != checkboxCell.EditedFormattedValue && true == (bool)checkboxCell.EditedFormattedValue);
+                        if (true == isSelected)
                         {
-                            messageSite += Environment.NewLine;
-                            messageSite += row.Cells["name"].Value.ToString();
+                            MySqlCommand delete_Sites = new MySqlCommand("delete from hrm_database.site_table where sid = " + row.Cells["sid"].Value + ";", Utils.MySql.myConn);
+                            Utils.MySql.myConn.Open();
+                            delete_Sites.ExecuteNonQuery();
+                            Utils.MySql.myConn.Close();
                         }
                     }
-                    MessageBox.Show("Selected Values" + string.Empty);
                     break;
 
                 case "contract_users":
-                    string msgContract = string.Empty;
                     foreach (DataGridViewRow row in site_Datagrid.Rows)
                     {
-                        bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
-                        if (isSelected)
+                        checkboxCell = row.Cells[0] as DataGridViewCheckBoxCell;
+                        bool isSelected = (null != checkboxCell && null != checkboxCell.EditedFormattedValue && true == (bool)checkboxCell.EditedFormattedValue);
+                        if (true == isSelected)
                         {
-                            msgContract += Environment.NewLine;
-                            msgContract += row.Cells["name"].Value.ToString();
+                            MySqlCommand delete_Sites = new MySqlCommand("delete from hrm_database.contract_users where cid = " + row.Cells["cid"].Value + ";", Utils.MySql.myConn);
+                            Utils.MySql.myConn.Open();
+                            delete_Sites.ExecuteNonQuery();
+                            Utils.MySql.myConn.Close();
                         }
                     }
-                    MessageBox.Show("Selected Values" + msgContract);
                     break;
 
                 case "supervisor_users":
-                    string messageSuper = string.Empty;
                     foreach (DataGridViewRow row in site_Datagrid.Rows)
                     {
-                        bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn"].Value);
-                        if (isSelected)
+                        checkboxCell = row.Cells[0] as DataGridViewCheckBoxCell;
+                        bool isSelected = (null != checkboxCell && null != checkboxCell.EditedFormattedValue && true == (bool)checkboxCell.EditedFormattedValue);
+                        if (true == isSelected)
                         {
-                            messageSuper += Environment.NewLine;
-                            messageSuper += row.Cells["name"].Value.ToString();
+                            MySqlCommand delete_Sites = new MySqlCommand("delete from hrm_database.supervisor_users where su_id = " + row.Cells["su_id"].Value + ";", Utils.MySql.myConn);
+                            Utils.MySql.myConn.Open();
+                            delete_Sites.ExecuteNonQuery();
+                            Utils.MySql.myConn.Close();
                         }
                     }
-                    MessageBox.Show("Selected Values" + messageSuper);
                     break;
-                    
+
                 case "employee_table":
                     MySqlCommand pendingEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where auth = 0;", Utils.MySql.myConn);
                     try
@@ -345,8 +347,6 @@ namespace IHRM.List
                         bSource.DataSource = dt;
                         site_Datagrid.DataSource = bSource;
                         sda.Update(dt);
-                        //table = "employee_table";
-                        //setButtonText(table);
                     }
                     catch (Exception ex)
                     {
@@ -485,6 +485,26 @@ namespace IHRM.List
                 default:
                     MessageBox.Show("Select a button from the navigation menu", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
+            }
+        }
+
+        private void site_modify_Click(object sender, EventArgs e)
+        {
+            if (table == "employee_table")
+            { 
+                foreach (DataGridViewRow row in site_Datagrid.Rows)
+                {
+                    DataGridViewCheckBoxCell checkboxCell;
+                    checkboxCell = row.Cells[0] as DataGridViewCheckBoxCell;
+                    bool isSelected = (null != checkboxCell && null != checkboxCell.EditedFormattedValue && true == (bool)checkboxCell.EditedFormattedValue);
+                    if (true == isSelected)
+                    {
+                        MySqlCommand delete_Sites = new MySqlCommand("UPDATE hrm_database.employee_users SET auth = 1 where eid = " + row.Cells["eid"].Value + ";", Utils.MySql.myConn);
+                        Utils.MySql.myConn.Open();
+                        delete_Sites.ExecuteNonQuery();
+                        Utils.MySql.myConn.Close();
+                    }
+                }
             }
         }
     }

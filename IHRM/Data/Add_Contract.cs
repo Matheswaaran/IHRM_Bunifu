@@ -45,9 +45,16 @@ namespace IHRM.Data
                 string password = add_Contract_password.Text;
 
                 //Insert into database
-                MySqlCommand sql_site_insert = new MySqlCommand("INSERT INTO contract_users(id,name,email,aadhar_uid,aadhar_string,password,gid)values(" + id + ",'" + name + "','" + emailid + "','" + aadharUid + "','" + aadharString + "'," + password + "'" + Utils.Session.getUsername() + "');", Utils.MySql.myConn);
+                MySqlCommand sql_contract_insert = new MySqlCommand("INSERT INTO contract_users(name,email,aadhar_uid,aadhar_string,password,gid)values('" + name + "','" + emailid + "','" + aadharUid + "','" + aadharString + "'," + password + "'" + Utils.Session.getUsername() + "');", Utils.MySql.myConn);
                 Utils.MySql.myConn.Open();
-                MySqlDataReader insert_site = sql_site_insert.ExecuteReader();
+                sql_contract_insert.ExecuteNonQuery();
+                MessageBox.Show("Successfully Added.", "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                add_Contract_id.Text = "";
+                add_Contract_name.Text = "";
+                add_Contract_aadharUid.Text = "";
+                add_Contract_aadharString.Text = "";
+                add_Contract_password.Text = "";
+                add_Contract_name.Focus();
             }
             catch (Exception ex)
             {

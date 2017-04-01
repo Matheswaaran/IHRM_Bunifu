@@ -37,17 +37,26 @@ namespace IHRM.Data
         {
             try
             {
-                int id = int.Parse(add_Site_id.Text);
+                string id = add_Site_id.Text;
                 string name = add_Site_name.Text;
                 string address = add_Site_address.Text;
                 string district = add_Site_district.Text;
                 string state = add_Site_state.Text;
-                int type = int.Parse(add_Site_type.Text);
+                string type = add_Site_type.Text;
 
                 //Insert into database
-                MySqlCommand sql_site_insert = new MySqlCommand("INSERT INTO site_table(id,name,address,district,state,type)values(" + id + ",'" + name + "','" + address + "','" + district + "','" + state + "'," + type + ");", Utils.MySql.myConn);
+                MySqlCommand sql_site_insert = new MySqlCommand("INSERT INTO hrm_database.site_table(name,address,district,state,type)values('" + name + "','" + address + "','" + district + "','" + state + "'," + type + ");", Utils.MySql.myConn);
                 Utils.MySql.myConn.Open();
-                MySqlDataReader insert_site = sql_site_insert.ExecuteReader();
+                //MySqlDataReader insert_site = sql_site_insert.ExecuteReader();
+                sql_site_insert.ExecuteNonQuery();
+                MessageBox.Show("Successfully Added.", "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                add_Site_id.Text = "";
+                add_Site_name.Text = "";
+                add_Site_address.Text = "";
+                add_Site_district.Text = "";
+                add_Site_state.Text = "";
+                add_Site_type.Text = "";
+                add_Site_name.Focus();
             }
             catch(Exception ex)
             {
