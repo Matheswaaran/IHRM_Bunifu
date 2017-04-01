@@ -387,7 +387,9 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.site_Datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.site_Datagrid.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.site_Datagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.site_Datagrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.site_Datagrid.BackgroundColor = System.Drawing.Color.White;
             this.site_Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.site_Datagrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -401,6 +403,7 @@
             this.site_Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.site_Datagrid.DoubleBuffered = true;
             this.site_Datagrid.EnableHeadersVisualStyles = false;
+            this.site_Datagrid.GridColor = System.Drawing.Color.White;
             this.site_Datagrid.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.site_Datagrid.HeaderForeColor = System.Drawing.Color.White;
             this.site_Datagrid.Location = new System.Drawing.Point(7, 65);
