@@ -87,7 +87,7 @@
             this.add_Contract_aadharString.Margin = new System.Windows.Forms.Padding(4);
             this.add_Contract_aadharString.Name = "add_Contract_aadharString";
             this.add_Contract_aadharString.Size = new System.Drawing.Size(268, 31);
-            this.add_Contract_aadharString.TabIndex = 41;
+            this.add_Contract_aadharString.TabIndex = 5;
             this.add_Contract_aadharString.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_Contract_aadharUid
@@ -106,7 +106,7 @@
             this.add_Contract_aadharUid.Margin = new System.Windows.Forms.Padding(4);
             this.add_Contract_aadharUid.Name = "add_Contract_aadharUid";
             this.add_Contract_aadharUid.Size = new System.Drawing.Size(268, 31);
-            this.add_Contract_aadharUid.TabIndex = 40;
+            this.add_Contract_aadharUid.TabIndex = 4;
             this.add_Contract_aadharUid.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_Contract_email
@@ -125,7 +125,7 @@
             this.add_Contract_email.Margin = new System.Windows.Forms.Padding(4);
             this.add_Contract_email.Name = "add_Contract_email";
             this.add_Contract_email.Size = new System.Drawing.Size(268, 31);
-            this.add_Contract_email.TabIndex = 39;
+            this.add_Contract_email.TabIndex = 2;
             this.add_Contract_email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_Contract_name
@@ -144,7 +144,7 @@
             this.add_Contract_name.Margin = new System.Windows.Forms.Padding(4);
             this.add_Contract_name.Name = "add_Contract_name";
             this.add_Contract_name.Size = new System.Drawing.Size(268, 31);
-            this.add_Contract_name.TabIndex = 38;
+            this.add_Contract_name.TabIndex = 1;
             this.add_Contract_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_Contract_id
@@ -163,7 +163,7 @@
             this.add_Contract_id.Margin = new System.Windows.Forms.Padding(4);
             this.add_Contract_id.Name = "add_Contract_id";
             this.add_Contract_id.Size = new System.Drawing.Size(268, 31);
-            this.add_Contract_id.TabIndex = 37;
+            this.add_Contract_id.TabIndex = 0;
             this.add_Contract_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_contract_label4
@@ -272,7 +272,7 @@
             this.add_contract_close.Margin = new System.Windows.Forms.Padding(5);
             this.add_contract_close.Name = "add_contract_close";
             this.add_contract_close.Size = new System.Drawing.Size(108, 49);
-            this.add_contract_close.TabIndex = 30;
+            this.add_contract_close.TabIndex = 9;
             this.add_contract_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.add_contract_close.Click += new System.EventHandler(this.add_contract_close_Click);
             // 
@@ -298,7 +298,7 @@
             this.add_contract_cancel.Margin = new System.Windows.Forms.Padding(5);
             this.add_contract_cancel.Name = "add_contract_cancel";
             this.add_contract_cancel.Size = new System.Drawing.Size(108, 49);
-            this.add_contract_cancel.TabIndex = 29;
+            this.add_contract_cancel.TabIndex = 8;
             this.add_contract_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.add_contract_cancel.Click += new System.EventHandler(this.add_contract_cancel_Click);
             // 
@@ -324,7 +324,7 @@
             this.add_contract_add.Margin = new System.Windows.Forms.Padding(5);
             this.add_contract_add.Name = "add_contract_add";
             this.add_contract_add.Size = new System.Drawing.Size(108, 49);
-            this.add_contract_add.TabIndex = 28;
+            this.add_contract_add.TabIndex = 7;
             this.add_contract_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.add_contract_add.Click += new System.EventHandler(this.add_contract_add_Click);
             // 
@@ -344,7 +344,7 @@
             this.add_Contract_password.Margin = new System.Windows.Forms.Padding(4);
             this.add_Contract_password.Name = "add_Contract_password";
             this.add_Contract_password.Size = new System.Drawing.Size(268, 31);
-            this.add_Contract_password.TabIndex = 43;
+            this.add_Contract_password.TabIndex = 6;
             this.add_Contract_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel1
@@ -373,7 +373,7 @@
             this.add_Contract_siteId.Margin = new System.Windows.Forms.Padding(4);
             this.add_Contract_siteId.Name = "add_Contract_siteId";
             this.add_Contract_siteId.Size = new System.Drawing.Size(268, 31);
-            this.add_Contract_siteId.TabIndex = 45;
+            this.add_Contract_siteId.TabIndex = 3;
             this.add_Contract_siteId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel2

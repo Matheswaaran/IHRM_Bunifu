@@ -49,6 +49,7 @@ namespace IHRM.Data
                 Utils.MySql.myConn.Open();
                 //MySqlDataReader insert_site = sql_site_insert.ExecuteReader();
                 sql_site_insert.ExecuteNonQuery();
+                Utils.MySql.myConn.Close();
                 MessageBox.Show("Successfully Added.", "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 add_Site_id.Text = "";
                 add_Site_name.Text = "";

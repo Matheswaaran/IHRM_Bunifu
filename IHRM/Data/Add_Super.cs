@@ -37,17 +37,28 @@ namespace IHRM.Data
         {
             try
             {
-                int id = int.Parse(add_super_id.Text);
+                string id = add_super_id.Text;
                 string name = add_super_name.Text;
                 string emailid = add_super_email.Text;
-                int aadharUid = int.Parse(add_super_aadharUid.Text);
+                string aadharUid = add_super_aadharUid.Text;
                 string aadharString = add_super_aadharString.Text;
                 string password = add_super_password.Text;
+                string siteid = add_super_siteId.Text;
 
                 //Insert into database
-                MySqlCommand sql_site_insert = new MySqlCommand("INSERT INTO supervisour_users(id,name,email,aadhar_uid,aadhar_string,password,gid)values(" + id + ",'" + name + "','" + emailid + "','" + aadharUid + "','" + aadharString + "'," + password + "'" + Utils.Session.getUsername() + "');", Utils.MySql.myConn);
+                MySqlCommand sql_super_insert = new MySqlCommand("INSERT INTO hrm_database.supervisor_users(name,sid,email,aadhar_uid,aadhar_string,password,gid)values('" + name + "','" + int.Parse(siteid) + "','" + emailid + "','" + int.Parse(aadharUid) + "','" + aadharString + "','" + password + "','" + Utils.Session.getId() + "');", Utils.MySql.myConn);
                 Utils.MySql.myConn.Open();
-                MySqlDataReader insert_site = sql_site_insert.ExecuteReader();
+                sql_super_insert.ExecuteNonQuery();
+                Utils.MySql.myConn.Close();
+                MessageBox.Show("Successfully Added.", "message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                add_super_id.Text = "";
+                add_super_name.Text = "";
+                add_super_email.Text = "";
+                add_super_aadharUid.Text = "";
+                add_super_password.Text = "";
+                add_super_password.Text = "";
+                add_super_siteId.Text = "";
+                add_super_name.Focus();
             }
             catch (Exception ex)
             {

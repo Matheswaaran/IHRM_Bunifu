@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Site));
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.panel_menu = new System.Windows.Forms.Panel();
+            this.list_exit = new ns1.BunifuImageButton();
             this.add_subtitle = new ns1.BunifuCustomLabel();
             this.add_title = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
@@ -46,7 +47,6 @@
             this.add_Site_district = new ns1.BunifuMaterialTextbox();
             this.add_Site_state = new ns1.BunifuMaterialTextbox();
             this.add_Site_type = new ns1.BunifuMaterialTextbox();
-            this.list_exit = new ns1.BunifuImageButton();
             this.add_Site_close = new ns1.BunifuThinButton2();
             this.add_Site_cancel = new ns1.BunifuThinButton2();
             this.add_Site_add = new ns1.BunifuThinButton2();
@@ -68,6 +68,20 @@
             this.panel_menu.Name = "panel_menu";
             this.panel_menu.Size = new System.Drawing.Size(939, 33);
             this.panel_menu.TabIndex = 7;
+            // 
+            // list_exit
+            // 
+            this.list_exit.BackColor = System.Drawing.Color.SeaGreen;
+            this.list_exit.Image = ((System.Drawing.Image)(resources.GetObject("list_exit.Image")));
+            this.list_exit.ImageActive = null;
+            this.list_exit.Location = new System.Drawing.Point(913, 5);
+            this.list_exit.Name = "list_exit";
+            this.list_exit.Size = new System.Drawing.Size(25, 22);
+            this.list_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.list_exit.TabIndex = 7;
+            this.list_exit.TabStop = false;
+            this.list_exit.Zoom = 10;
+            this.list_exit.Click += new System.EventHandler(this.list_exit_Click);
             // 
             // add_subtitle
             // 
@@ -165,7 +179,7 @@
             this.add_Site_id.Margin = new System.Windows.Forms.Padding(4);
             this.add_Site_id.Name = "add_Site_id";
             this.add_Site_id.Size = new System.Drawing.Size(268, 31);
-            this.add_Site_id.TabIndex = 19;
+            this.add_Site_id.TabIndex = 0;
             this.add_Site_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_Site_name
@@ -184,7 +198,7 @@
             this.add_Site_name.Margin = new System.Windows.Forms.Padding(4);
             this.add_Site_name.Name = "add_Site_name";
             this.add_Site_name.Size = new System.Drawing.Size(268, 31);
-            this.add_Site_name.TabIndex = 20;
+            this.add_Site_name.TabIndex = 1;
             this.add_Site_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_Site_address
@@ -203,7 +217,7 @@
             this.add_Site_address.Margin = new System.Windows.Forms.Padding(4);
             this.add_Site_address.Name = "add_Site_address";
             this.add_Site_address.Size = new System.Drawing.Size(268, 31);
-            this.add_Site_address.TabIndex = 21;
+            this.add_Site_address.TabIndex = 2;
             this.add_Site_address.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_Site_district
@@ -222,7 +236,7 @@
             this.add_Site_district.Margin = new System.Windows.Forms.Padding(4);
             this.add_Site_district.Name = "add_Site_district";
             this.add_Site_district.Size = new System.Drawing.Size(268, 31);
-            this.add_Site_district.TabIndex = 22;
+            this.add_Site_district.TabIndex = 3;
             this.add_Site_district.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_Site_state
@@ -241,7 +255,7 @@
             this.add_Site_state.Margin = new System.Windows.Forms.Padding(4);
             this.add_Site_state.Name = "add_Site_state";
             this.add_Site_state.Size = new System.Drawing.Size(268, 31);
-            this.add_Site_state.TabIndex = 23;
+            this.add_Site_state.TabIndex = 4;
             this.add_Site_state.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_Site_type
@@ -260,22 +274,8 @@
             this.add_Site_type.Margin = new System.Windows.Forms.Padding(4);
             this.add_Site_type.Name = "add_Site_type";
             this.add_Site_type.Size = new System.Drawing.Size(268, 31);
-            this.add_Site_type.TabIndex = 24;
+            this.add_Site_type.TabIndex = 5;
             this.add_Site_type.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // list_exit
-            // 
-            this.list_exit.BackColor = System.Drawing.Color.SeaGreen;
-            this.list_exit.Image = ((System.Drawing.Image)(resources.GetObject("list_exit.Image")));
-            this.list_exit.ImageActive = null;
-            this.list_exit.Location = new System.Drawing.Point(913, 5);
-            this.list_exit.Name = "list_exit";
-            this.list_exit.Size = new System.Drawing.Size(25, 22);
-            this.list_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.list_exit.TabIndex = 7;
-            this.list_exit.TabStop = false;
-            this.list_exit.Zoom = 10;
-            this.list_exit.Click += new System.EventHandler(this.list_exit_Click);
             // 
             // add_Site_close
             // 
@@ -299,7 +299,7 @@
             this.add_Site_close.Margin = new System.Windows.Forms.Padding(5);
             this.add_Site_close.Name = "add_Site_close";
             this.add_Site_close.Size = new System.Drawing.Size(108, 49);
-            this.add_Site_close.TabIndex = 12;
+            this.add_Site_close.TabIndex = 8;
             this.add_Site_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.add_Site_close.Click += new System.EventHandler(this.add_Site_close_Click);
             // 
@@ -325,7 +325,7 @@
             this.add_Site_cancel.Margin = new System.Windows.Forms.Padding(5);
             this.add_Site_cancel.Name = "add_Site_cancel";
             this.add_Site_cancel.Size = new System.Drawing.Size(108, 49);
-            this.add_Site_cancel.TabIndex = 11;
+            this.add_Site_cancel.TabIndex = 7;
             this.add_Site_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.add_Site_cancel.Click += new System.EventHandler(this.add_Site_cancel_Click);
             // 
@@ -351,7 +351,7 @@
             this.add_Site_add.Margin = new System.Windows.Forms.Padding(5);
             this.add_Site_add.Name = "add_Site_add";
             this.add_Site_add.Size = new System.Drawing.Size(108, 49);
-            this.add_Site_add.TabIndex = 10;
+            this.add_Site_add.TabIndex = 6;
             this.add_Site_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.add_Site_add.Click += new System.EventHandler(this.add_Site_add_Click);
             // 

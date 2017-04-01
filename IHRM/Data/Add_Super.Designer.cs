@@ -50,6 +50,8 @@
             this.add_super_add = new ns1.BunifuThinButton2();
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.add_super_title = new ns1.BunifuCustomLabel();
+            this.add_super_siteId = new ns1.BunifuMaterialTextbox();
+            this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.panel_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.add_super_exit)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +72,7 @@
             this.add_super_password.Margin = new System.Windows.Forms.Padding(4);
             this.add_super_password.Name = "add_super_password";
             this.add_super_password.Size = new System.Drawing.Size(268, 31);
-            this.add_super_password.TabIndex = 61;
+            this.add_super_password.TabIndex = 6;
             this.add_super_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel1
@@ -109,7 +111,7 @@
             this.add_super_aadharString.Margin = new System.Windows.Forms.Padding(4);
             this.add_super_aadharString.Name = "add_super_aadharString";
             this.add_super_aadharString.Size = new System.Drawing.Size(268, 31);
-            this.add_super_aadharString.TabIndex = 59;
+            this.add_super_aadharString.TabIndex = 5;
             this.add_super_aadharString.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_super_aadharUid
@@ -128,7 +130,7 @@
             this.add_super_aadharUid.Margin = new System.Windows.Forms.Padding(4);
             this.add_super_aadharUid.Name = "add_super_aadharUid";
             this.add_super_aadharUid.Size = new System.Drawing.Size(268, 31);
-            this.add_super_aadharUid.TabIndex = 58;
+            this.add_super_aadharUid.TabIndex = 4;
             this.add_super_aadharUid.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_super_email
@@ -147,7 +149,7 @@
             this.add_super_email.Margin = new System.Windows.Forms.Padding(4);
             this.add_super_email.Name = "add_super_email";
             this.add_super_email.Size = new System.Drawing.Size(268, 31);
-            this.add_super_email.TabIndex = 57;
+            this.add_super_email.TabIndex = 2;
             this.add_super_email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_super_name
@@ -166,7 +168,7 @@
             this.add_super_name.Margin = new System.Windows.Forms.Padding(4);
             this.add_super_name.Name = "add_super_name";
             this.add_super_name.Size = new System.Drawing.Size(268, 31);
-            this.add_super_name.TabIndex = 56;
+            this.add_super_name.TabIndex = 1;
             this.add_super_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_super_id
@@ -185,7 +187,7 @@
             this.add_super_id.Margin = new System.Windows.Forms.Padding(4);
             this.add_super_id.Name = "add_super_id";
             this.add_super_id.Size = new System.Drawing.Size(268, 31);
-            this.add_super_id.TabIndex = 55;
+            this.add_super_id.TabIndex = 0;
             this.add_super_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // add_contract_label4
@@ -274,7 +276,7 @@
             this.add_super_close.Margin = new System.Windows.Forms.Padding(5);
             this.add_super_close.Name = "add_super_close";
             this.add_super_close.Size = new System.Drawing.Size(108, 49);
-            this.add_super_close.TabIndex = 49;
+            this.add_super_close.TabIndex = 9;
             this.add_super_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.add_super_close.Click += new System.EventHandler(this.add_super_close_Click);
             // 
@@ -300,7 +302,7 @@
             this.add_super_cancel.Margin = new System.Windows.Forms.Padding(5);
             this.add_super_cancel.Name = "add_super_cancel";
             this.add_super_cancel.Size = new System.Drawing.Size(108, 49);
-            this.add_super_cancel.TabIndex = 48;
+            this.add_super_cancel.TabIndex = 8;
             this.add_super_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.add_super_cancel.Click += new System.EventHandler(this.add_super_cancel_Click);
             // 
@@ -336,7 +338,7 @@
             this.add_super_add.Margin = new System.Windows.Forms.Padding(5);
             this.add_super_add.Name = "add_super_add";
             this.add_super_add.Size = new System.Drawing.Size(108, 49);
-            this.add_super_add.TabIndex = 47;
+            this.add_super_add.TabIndex = 7;
             this.add_super_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.add_super_add.Click += new System.EventHandler(this.add_super_add_Click);
             // 
@@ -355,11 +357,42 @@
             this.add_super_title.TabIndex = 45;
             this.add_super_title.Text = "Create a Supervisour";
             // 
+            // add_super_siteId
+            // 
+            this.add_super_siteId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.add_super_siteId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.add_super_siteId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.add_super_siteId.HintForeColor = System.Drawing.Color.Empty;
+            this.add_super_siteId.HintText = "";
+            this.add_super_siteId.isPassword = false;
+            this.add_super_siteId.LineFocusedColor = System.Drawing.Color.Green;
+            this.add_super_siteId.LineIdleColor = System.Drawing.Color.Gray;
+            this.add_super_siteId.LineMouseHoverColor = System.Drawing.Color.Green;
+            this.add_super_siteId.LineThickness = 3;
+            this.add_super_siteId.Location = new System.Drawing.Point(147, 351);
+            this.add_super_siteId.Margin = new System.Windows.Forms.Padding(4);
+            this.add_super_siteId.Name = "add_super_siteId";
+            this.add_super_siteId.Size = new System.Drawing.Size(268, 31);
+            this.add_super_siteId.TabIndex = 3;
+            this.add_super_siteId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(15, 353);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(39, 29);
+            this.bunifuCustomLabel2.TabIndex = 62;
+            this.bunifuCustomLabel2.Text = "ID";
+            // 
             // Add_Super
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 497);
+            this.Controls.Add(this.add_super_siteId);
+            this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.add_super_password);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.add_contract_label5);
@@ -410,5 +443,7 @@
         private ns1.BunifuThinButton2 add_super_add;
         private ns1.BunifuElipse bunifuElipse1;
         private ns1.BunifuCustomLabel add_super_title;
+        private ns1.BunifuMaterialTextbox add_super_siteId;
+        private ns1.BunifuCustomLabel bunifuCustomLabel2;
     }
 }
