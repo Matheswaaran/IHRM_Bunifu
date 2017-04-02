@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(List));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(List));
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.panel_navigation = new System.Windows.Forms.Panel();
             this.btn_logout = new ns1.BunifuFlatButton();
@@ -43,6 +43,7 @@
             this.btn_home = new ns1.BunifuFlatButton();
             this.list_logo = new ns1.BunifuCustomLabel();
             this.panel_home = new System.Windows.Forms.Panel();
+            this.site_picture = new ns1.BunifuThinButton2();
             this.site_searchBtn = new ns1.BunifuImageButton();
             this.site_search = new ns1.BunifuMaterialTextbox();
             this.site_Datagrid = new ns1.BunifuCustomDataGrid();
@@ -339,6 +340,7 @@
             // panel_home
             // 
             this.panel_home.BackColor = System.Drawing.Color.White;
+            this.panel_home.Controls.Add(this.site_picture);
             this.panel_home.Controls.Add(this.site_searchBtn);
             this.panel_home.Controls.Add(this.site_search);
             this.panel_home.Controls.Add(this.site_Datagrid);
@@ -351,12 +353,39 @@
             this.panel_home.Size = new System.Drawing.Size(737, 465);
             this.panel_home.TabIndex = 0;
             // 
+            // site_picture
+            // 
+            this.site_picture.ActiveBorderThickness = 1;
+            this.site_picture.ActiveCornerRadius = 20;
+            this.site_picture.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.site_picture.ActiveForecolor = System.Drawing.Color.White;
+            this.site_picture.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.site_picture.BackColor = System.Drawing.Color.White;
+            this.site_picture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("site_picture.BackgroundImage")));
+            this.site_picture.ButtonText = "Picture";
+            this.site_picture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.site_picture.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.site_picture.ForeColor = System.Drawing.Color.SeaGreen;
+            this.site_picture.IdleBorderThickness = 1;
+            this.site_picture.IdleCornerRadius = 20;
+            this.site_picture.IdleFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.site_picture.IdleForecolor = System.Drawing.Color.White;
+            this.site_picture.IdleLineColor = System.Drawing.Color.White;
+            this.site_picture.Location = new System.Drawing.Point(329, 8);
+            this.site_picture.Margin = new System.Windows.Forms.Padding(5);
+            this.site_picture.Name = "site_picture";
+            this.site_picture.Size = new System.Drawing.Size(78, 49);
+            this.site_picture.TabIndex = 9;
+            this.site_picture.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.site_picture.Visible = false;
+            this.site_picture.Click += new System.EventHandler(this.site_picture_Click);
+            // 
             // site_searchBtn
             // 
             this.site_searchBtn.BackColor = System.Drawing.Color.Transparent;
             this.site_searchBtn.Image = global::IHRM.Properties.Resources.search;
             this.site_searchBtn.ImageActive = null;
-            this.site_searchBtn.Location = new System.Drawing.Point(668, 8);
+            this.site_searchBtn.Location = new System.Drawing.Point(691, 8);
             this.site_searchBtn.Name = "site_searchBtn";
             this.site_searchBtn.Size = new System.Drawing.Size(34, 40);
             this.site_searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -377,7 +406,7 @@
             this.site_search.LineIdleColor = System.Drawing.Color.Gray;
             this.site_search.LineMouseHoverColor = System.Drawing.Color.Green;
             this.site_search.LineThickness = 3;
-            this.site_search.Location = new System.Drawing.Point(393, 17);
+            this.site_search.Location = new System.Drawing.Point(416, 17);
             this.site_search.Margin = new System.Windows.Forms.Padding(4);
             this.site_search.Name = "site_search";
             this.site_search.Size = new System.Drawing.Size(268, 31);
@@ -562,5 +591,6 @@
         private ns1.BunifuFlatButton btn_logout;
         private System.Windows.Forms.Panel panel_menu;
         private ns1.BunifuImageButton list_exit;
+        private ns1.BunifuThinButton2 site_picture;
     }
 }

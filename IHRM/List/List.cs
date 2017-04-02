@@ -37,6 +37,7 @@ namespace IHRM.List
                     site_add.Visible = true;
                     site_delete.Visible = true;
                     site_modify.Visible = false;
+                    site_picture.Visible = false;
                     break;
                 case "contract_users":
                     site_add.ButtonText = "Add";
@@ -45,6 +46,7 @@ namespace IHRM.List
                     site_add.Visible = true;
                     site_delete.Visible = true;
                     site_modify.Visible = false;
+                    site_picture.Visible = false;
                     break;
                 case "supervisor_users":
                     site_add.ButtonText = "Add";
@@ -53,6 +55,7 @@ namespace IHRM.List
                     site_add.Visible = true;
                     site_delete.Visible = true;
                     site_modify.Visible = false;
+                    site_picture.Visible = false;
                     break;
                 case "employee_table":
                     site_add.ButtonText = "Approved";
@@ -61,12 +64,14 @@ namespace IHRM.List
                     site_add.Visible = true;
                     site_delete.Visible = true;
                     site_modify.Visible = true;
+                    site_picture.Visible = true;
                     break;
 
                 case "employee_attendance_table":
                     site_add.Visible = false;
                     site_delete.Visible = false;
                     site_modify.Visible = false;
+                    site_picture.Visible = false;
                     break;
                 default:
                     MessageBox.Show("Select a button from the navigation menu", "message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -328,6 +333,7 @@ namespace IHRM.List
                         Utils.MySql.myConn.Close();
                     }
                 }
+            DataTable(Utils.MySql.approvedEmployee, "employee_table");
             //}
         }
 
@@ -341,6 +347,27 @@ namespace IHRM.List
         {
             settings set = new settings();
             set.Show();
+        }
+
+        private void site_picture_Click(object sender, EventArgs e)
+        {
+            site_Datagrid.MultiSelect = false;
+            foreach (DataGridViewRow row in site_Datagrid.Rows)
+            {
+                DataGridViewCheckBoxCell checkboxCell;
+                checkboxCell = row.Cells[0] as DataGridViewCheckBoxCell;
+                bool isSelected = (null != checkboxCell && null != checkboxCell.EditedFormattedValue && true == (bool)checkboxCell.EditedFormattedValue);
+                if (true == isSelected)
+                {
+                    string URL = "http://192.168.1.103:8888/HRM_Backend/uploads/" + row.Cells[5].Value + ".jpg";
+                    //MessageBox.Show(URL);
+                    //Utils.Global.setImage(URL);
+                    //Picture pic = new Picture();
+                    //pic.Show();
+                    System.Diagnostics.Process.Start(URL);
+                }
+            }
+            site_Datagrid.MultiSelect = true;
         }
     }
 }
