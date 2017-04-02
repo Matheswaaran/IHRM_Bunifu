@@ -66,7 +66,7 @@
             // 
             // panel_navigation
             // 
-            this.panel_navigation.BackColor = System.Drawing.Color.White;
+            this.panel_navigation.BackColor = System.Drawing.Color.SeaGreen;
             this.panel_navigation.Controls.Add(this.btn_logout);
             this.panel_navigation.Controls.Add(this.btn_setting);
             this.panel_navigation.Controls.Add(this.btn_empAttendance);
@@ -83,8 +83,8 @@
             // 
             // btn_logout
             // 
-            this.btn_logout.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_logout.BackColor = System.Drawing.Color.White;
+            this.btn_logout.Activecolor = System.Drawing.Color.White;
+            this.btn_logout.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_logout.BorderRadius = 0;
             this.btn_logout.ButtonText = " Logout";
@@ -104,7 +104,7 @@
             this.btn_logout.IsTab = true;
             this.btn_logout.Location = new System.Drawing.Point(0, 405);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Normalcolor = System.Drawing.Color.White;
+            this.btn_logout.Normalcolor = System.Drawing.Color.SeaGreen;
             this.btn_logout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_logout.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_logout.selected = false;
@@ -118,8 +118,8 @@
             // 
             // btn_setting
             // 
-            this.btn_setting.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_setting.BackColor = System.Drawing.Color.White;
+            this.btn_setting.Activecolor = System.Drawing.Color.White;
+            this.btn_setting.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_setting.BorderRadius = 0;
             this.btn_setting.ButtonText = " Settings";
@@ -139,7 +139,7 @@
             this.btn_setting.IsTab = true;
             this.btn_setting.Location = new System.Drawing.Point(0, 351);
             this.btn_setting.Name = "btn_setting";
-            this.btn_setting.Normalcolor = System.Drawing.Color.White;
+            this.btn_setting.Normalcolor = System.Drawing.Color.SeaGreen;
             this.btn_setting.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_setting.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_setting.selected = false;
@@ -153,8 +153,8 @@
             // 
             // btn_empAttendance
             // 
-            this.btn_empAttendance.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_empAttendance.BackColor = System.Drawing.Color.White;
+            this.btn_empAttendance.Activecolor = System.Drawing.Color.White;
+            this.btn_empAttendance.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_empAttendance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_empAttendance.BorderRadius = 0;
             this.btn_empAttendance.ButtonText = " Employee Attendance";
@@ -174,7 +174,7 @@
             this.btn_empAttendance.IsTab = true;
             this.btn_empAttendance.Location = new System.Drawing.Point(0, 297);
             this.btn_empAttendance.Name = "btn_empAttendance";
-            this.btn_empAttendance.Normalcolor = System.Drawing.Color.White;
+            this.btn_empAttendance.Normalcolor = System.Drawing.Color.SeaGreen;
             this.btn_empAttendance.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_empAttendance.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_empAttendance.selected = false;
@@ -188,8 +188,8 @@
             // 
             // btn_employee
             // 
-            this.btn_employee.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_employee.BackColor = System.Drawing.Color.White;
+            this.btn_employee.Activecolor = System.Drawing.Color.White;
+            this.btn_employee.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_employee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_employee.BorderRadius = 0;
             this.btn_employee.ButtonText = " Employee List";
@@ -209,7 +209,7 @@
             this.btn_employee.IsTab = true;
             this.btn_employee.Location = new System.Drawing.Point(0, 243);
             this.btn_employee.Name = "btn_employee";
-            this.btn_employee.Normalcolor = System.Drawing.Color.White;
+            this.btn_employee.Normalcolor = System.Drawing.Color.SeaGreen;
             this.btn_employee.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_employee.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_employee.selected = false;
@@ -223,8 +223,8 @@
             // 
             // btn_supervisour
             // 
-            this.btn_supervisour.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_supervisour.BackColor = System.Drawing.Color.White;
+            this.btn_supervisour.Activecolor = System.Drawing.Color.White;
+            this.btn_supervisour.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_supervisour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_supervisour.BorderRadius = 0;
             this.btn_supervisour.ButtonText = "Supervisor List";
@@ -244,7 +244,7 @@
             this.btn_supervisour.IsTab = true;
             this.btn_supervisour.Location = new System.Drawing.Point(0, 189);
             this.btn_supervisour.Name = "btn_supervisour";
-            this.btn_supervisour.Normalcolor = System.Drawing.Color.White;
+            this.btn_supervisour.Normalcolor = System.Drawing.Color.SeaGreen;
             this.btn_supervisour.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_supervisour.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_supervisour.selected = false;
@@ -258,8 +258,8 @@
             // 
             // btn_contract
             // 
-            this.btn_contract.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_contract.BackColor = System.Drawing.Color.White;
+            this.btn_contract.Activecolor = System.Drawing.Color.White;
+            this.btn_contract.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_contract.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_contract.BorderRadius = 0;
             this.btn_contract.ButtonText = "Contractor List";
@@ -279,7 +279,7 @@
             this.btn_contract.IsTab = true;
             this.btn_contract.Location = new System.Drawing.Point(0, 135);
             this.btn_contract.Name = "btn_contract";
-            this.btn_contract.Normalcolor = System.Drawing.Color.White;
+            this.btn_contract.Normalcolor = System.Drawing.Color.SeaGreen;
             this.btn_contract.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_contract.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_contract.selected = false;
@@ -293,8 +293,8 @@
             // 
             // btn_home
             // 
-            this.btn_home.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_home.BackColor = System.Drawing.Color.White;
+            this.btn_home.Activecolor = System.Drawing.Color.White;
+            this.btn_home.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_home.BorderRadius = 0;
             this.btn_home.ButtonText = "Site List";
@@ -314,7 +314,7 @@
             this.btn_home.IsTab = true;
             this.btn_home.Location = new System.Drawing.Point(0, 81);
             this.btn_home.Name = "btn_home";
-            this.btn_home.Normalcolor = System.Drawing.Color.White;
+            this.btn_home.Normalcolor = System.Drawing.Color.SeaGreen;
             this.btn_home.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_home.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_home.selected = true;

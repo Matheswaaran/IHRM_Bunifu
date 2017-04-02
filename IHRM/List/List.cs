@@ -85,13 +85,12 @@ namespace IHRM.List
             check = true;
         }
 
-        private void btn_home_Click(object sender, EventArgs e)
+        private void DataTable(MySqlCommand query, string tableName)
         {
-            MySqlCommand listSite = new MySqlCommand("SELECT sid,name,address,district,state from hrm_database.site_table;", Utils.MySql.myConn);
             try
             {
                 MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = listSite;
+                sda.SelectCommand = query;
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 BindingSource bSource = new BindingSource();
@@ -99,7 +98,7 @@ namespace IHRM.List
                 bSource.DataSource = dt;
                 site_Datagrid.DataSource = bSource;
                 sda.Update(dt);
-                table = "site_table";
+                table = tableName;
                 setButtonText(table);
             }
             catch (Exception ex)
@@ -112,31 +111,16 @@ namespace IHRM.List
             }
         }
 
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            //MySqlCommand listSite = new MySqlCommand("SELECT sid,name,address,district,state from hrm_database.site_table;", Utils.MySql.myConn);
+            DataTable(Utils.MySql.listSite, "site_table");
+        }
+
         private void btn_contract_Click(object sender, EventArgs e)
         {
-            MySqlCommand listContract = new MySqlCommand("SELECT cid,name,email,aadhar_uid,gid from hrm_database.contract_users;", Utils.MySql.myConn);
-            try
-            {
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = listContract;
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                BindingSource bSource = new BindingSource();
-
-                bSource.DataSource = dt;
-                site_Datagrid.DataSource = bSource;
-                sda.Update(dt);
-                table = "contract_users";
-                setButtonText(table);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            if (check == false)
-            {
-                checkbox();
-            }
+            //MySqlCommand listContract = new MySqlCommand("SELECT cid,name,email,aadhar_uid,gid from hrm_database.contract_users;", Utils.MySql.myConn);
+            DataTable(Utils.MySql.listContract, "contract_users");
         }
 
         private void btn_logout_Click(object sender, EventArgs e)
@@ -150,56 +134,14 @@ namespace IHRM.List
 
         private void btn_supervisour_Click(object sender, EventArgs e)
         {
-            MySqlCommand listSuper = new MySqlCommand("SELECT su_id,name,email,aadhar_uid,gid from hrm_database.supervisor_users;", Utils.MySql.myConn);
-            try
-            {
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = listSuper;
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                BindingSource bSource = new BindingSource();
-
-                bSource.DataSource = dt;
-                site_Datagrid.DataSource = bSource; 
-                sda.Update(dt);
-                table = "supervisor_users";
-                setButtonText(table);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            if (check == false)
-            {
-                checkbox();
-            }
+            //MySqlCommand listSuper = new MySqlCommand("SELECT su_id,name,email,aadhar_uid,gid from hrm_database.supervisor_users;", Utils.MySql.myConn);
+            DataTable(Utils.MySql.listSuper, "supervisor_users");
         }
 
         private void btn_employee_Click(object sender, EventArgs e)
         {
-            MySqlCommand listEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table;", Utils.MySql.myConn);
-            try
-            {
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = listEmployee;
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                BindingSource bSource = new BindingSource();
-
-                bSource.DataSource = dt;
-                site_Datagrid.DataSource = bSource;
-                sda.Update(dt);
-                table = "employee_table";
-                setButtonText(table);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            if (check == false)
-            {
-                checkbox();
-            }
+            //MySqlCommand listEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table;", Utils.MySql.myConn);
+            DataTable(Utils.MySql.listEmployee, "employee_table");
         }
 
         private void site_add_Click(object sender, EventArgs e)
@@ -219,27 +161,8 @@ namespace IHRM.List
                     addSuper.Show();
                     break;
                 case "employee_table":
-                    MySqlCommand approvedEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where auth = 1;", Utils.MySql.myConn);
-                    try
-                    {
-                        MySqlDataAdapter sda = new MySqlDataAdapter();
-                        sda.SelectCommand = approvedEmployee;
-                        DataTable dt = new DataTable();
-                        sda.Fill(dt);
-                        BindingSource bSource = new BindingSource();
-
-                        bSource.DataSource = dt;
-                        site_Datagrid.DataSource = bSource;
-                        sda.Update(dt);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    if (check == false)
-                    {
-                        checkbox();
-                    }
+                    //MySqlCommand approvedEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where auth = 1;", Utils.MySql.myConn);
+                    DataTable(Utils.MySql.approvedEmployee, "employee_table");
                     break;
 
                 case "employee_attendance_table":
@@ -269,6 +192,7 @@ namespace IHRM.List
                             Utils.MySql.myConn.Close();
                         }
                     }
+                    DataTable(Utils.MySql.listSite, "site_table");
                     break;
 
                 case "contract_users":
@@ -278,12 +202,13 @@ namespace IHRM.List
                         bool isSelected = (null != checkboxCell && null != checkboxCell.EditedFormattedValue && true == (bool)checkboxCell.EditedFormattedValue);
                         if (true == isSelected)
                         {
-                            MySqlCommand delete_Sites = new MySqlCommand("delete from hrm_database.contract_users where cid = " + row.Cells["cid"].Value + ";", Utils.MySql.myConn);
+                            MySqlCommand delete_Contract = new MySqlCommand("delete from hrm_database.contract_users where cid = " + row.Cells["cid"].Value + ";", Utils.MySql.myConn);
                             Utils.MySql.myConn.Open();
-                            delete_Sites.ExecuteNonQuery();
+                            delete_Contract.ExecuteNonQuery();
                             Utils.MySql.myConn.Close();
                         }
                     }
+                    DataTable(Utils.MySql.listContract, "contract_users");
                     break;
 
                 case "supervisor_users":
@@ -293,36 +218,18 @@ namespace IHRM.List
                         bool isSelected = (null != checkboxCell && null != checkboxCell.EditedFormattedValue && true == (bool)checkboxCell.EditedFormattedValue);
                         if (true == isSelected)
                         {
-                            MySqlCommand delete_Sites = new MySqlCommand("delete from hrm_database.supervisor_users where su_id = " + row.Cells["su_id"].Value + ";", Utils.MySql.myConn);
+                            MySqlCommand delete_Super = new MySqlCommand("delete from hrm_database.supervisor_users where su_id = " + row.Cells["su_id"].Value + ";", Utils.MySql.myConn);
                             Utils.MySql.myConn.Open();
-                            delete_Sites.ExecuteNonQuery();
+                            delete_Super.ExecuteNonQuery();
                             Utils.MySql.myConn.Close();
                         }
                     }
+                    DataTable(Utils.MySql.listSuper, "supervisor_users");
                     break;
 
                 case "employee_table":
-                    MySqlCommand pendingEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where auth = 0;", Utils.MySql.myConn);
-                    try
-                    {
-                        MySqlDataAdapter sda = new MySqlDataAdapter();
-                        sda.SelectCommand = pendingEmployee;
-                        DataTable dt = new DataTable();
-                        sda.Fill(dt);
-                        BindingSource bSource = new BindingSource();
-
-                        bSource.DataSource = dt;
-                        site_Datagrid.DataSource = bSource;
-                        sda.Update(dt);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    if (check == false)
-                    {
-                        checkbox();
-                    }
+                    //MySqlCommand pendingEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where auth = 0;", Utils.MySql.myConn);
+                    DataTable(Utils.MySql.pendingEmployee, "employee_table");
                     break;
 
                 case "employee_attendance_table":
@@ -356,122 +263,27 @@ namespace IHRM.List
             {
                 case "site_table":
                     MySqlCommand searchSite = new MySqlCommand("SELECT sid,name,address,district,state from hrm_database.site_table where sid =" + int.Parse(site_search.Text) + ";", Utils.MySql.myConn);
-                    try
-                    {
-                        MySqlDataAdapter sda = new MySqlDataAdapter();
-                        sda.SelectCommand = searchSite;
-                        DataTable dt = new DataTable();
-                        sda.Fill(dt);
-                        BindingSource bSource = new BindingSource();
-
-                        bSource.DataSource = dt;
-                        site_Datagrid.DataSource = bSource;
-                        sda.Update(dt);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    if (check == false)
-                    {
-                        checkbox();
-                    }
+                    DataTable(searchSite, "site_table");
                     break;
 
                 case "contract_users":
                     MySqlCommand searchContract = new MySqlCommand("SELECT cid,name,email,aadhar_uid,gid from hrm_database.contract_users where cid =" + int.Parse(site_search.Text) + ";", Utils.MySql.myConn);
-                    try
-                    {
-                        MySqlDataAdapter sda = new MySqlDataAdapter();
-                        sda.SelectCommand = searchContract;
-                        DataTable dt = new DataTable();
-                        sda.Fill(dt);
-                        BindingSource bSource = new BindingSource();
-
-                        bSource.DataSource = dt;
-                        site_Datagrid.DataSource = bSource;
-                        sda.Update(dt);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    if (check == false)
-                    {
-                        checkbox();
-                    }
+                    DataTable(searchContract, "contract_users");
                     break;
 
                 case "supervisor_users":
                     MySqlCommand searchSupervisor = new MySqlCommand("SELECT su_id,name,email,aadhar_uid,gid from hrm_database.supervisor_users where su_id =" + int.Parse(site_search.Text) + ";", Utils.MySql.myConn);
-                    try
-                    {
-                        MySqlDataAdapter sda = new MySqlDataAdapter();
-                        sda.SelectCommand = searchSupervisor;
-                        DataTable dt = new DataTable();
-                        sda.Fill(dt);
-                        BindingSource bSource = new BindingSource();
-
-                        bSource.DataSource = dt;
-                        site_Datagrid.DataSource = bSource;
-                        sda.Update(dt);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    if (check == false)
-                    {
-                        checkbox();
-                    }
+                    DataTable(searchSupervisor, "supervisor_users");
                     break;
 
                 case "employee_table":
                     MySqlCommand searchEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where eid =" + int.Parse(site_search.Text) + ";", Utils.MySql.myConn);
-                    try
-                    {
-                        MySqlDataAdapter sda = new MySqlDataAdapter();
-                        sda.SelectCommand = searchEmployee;
-                        DataTable dt = new DataTable();
-                        sda.Fill(dt);
-                        BindingSource bSource = new BindingSource();
-
-                        bSource.DataSource = dt;
-                        site_Datagrid.DataSource = bSource;
-                        sda.Update(dt);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    if (check == false)
-                    {
-                        checkbox();
-                    }
+                    DataTable(searchEmployee, "employee_table");
                     break;
 
                 case "employee_attendance_table":
                     MySqlCommand searchEmployeeAttendance = new MySqlCommand("SELECT atid,eid,sid,date,enter_time,exit_time from hrm_database.employee_attendance_table where eid =" + int.Parse(site_search.Text) + ";", Utils.MySql.myConn);
-                    try
-                    {
-                        MySqlDataAdapter sda = new MySqlDataAdapter();
-                        sda.SelectCommand = searchEmployeeAttendance;
-                        DataTable dt = new DataTable();
-                        sda.Fill(dt);
-                        BindingSource bSource = new BindingSource();
-
-                        bSource.DataSource = dt;
-                        site_Datagrid.DataSource = bSource;
-                        sda.Update(dt);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    if (check == false)
-                    {
-                        checkbox();
-                    }
+                    DataTable(searchEmployeeAttendance, "employee_attendance_table");
                     break;
 
                 default:
@@ -482,8 +294,8 @@ namespace IHRM.List
 
         private void site_modify_Click(object sender, EventArgs e)
         {
-            if (table == "employee_table")
-            { 
+            //if (table == "employee_table")
+            //{ 
                 foreach (DataGridViewRow row in site_Datagrid.Rows)
                 {
                     DataGridViewCheckBoxCell checkboxCell;
@@ -491,41 +303,19 @@ namespace IHRM.List
                     bool isSelected = (null != checkboxCell && null != checkboxCell.EditedFormattedValue && true == (bool)checkboxCell.EditedFormattedValue);
                     if (true == isSelected)
                     {
-                        MySqlCommand delete_Sites = new MySqlCommand("UPDATE hrm_database.employee_users SET auth = 1 where eid = " + row.Cells["eid"].Value + ";", Utils.MySql.myConn);
+                        MySqlCommand approveEmployees = new MySqlCommand("UPDATE hrm_database.employee_table SET auth = 1 where eid = " + row.Cells["eid"].Value + ";", Utils.MySql.myConn);
                         Utils.MySql.myConn.Open();
-                        delete_Sites.ExecuteNonQuery();
+                        approveEmployees.ExecuteNonQuery();
                         Utils.MySql.myConn.Close();
                     }
                 }
-            }
+            //}
         }
 
         private void btn_empAttendance_Click(object sender, EventArgs e)
         {
-            MySqlCommand listSite = new MySqlCommand("SELECT atid,eid,sid,date,enter_time,exit_time from hrm_database.employee_attendance_table;", Utils.MySql.myConn);
-            try
-            {
-                //setDatagridTable(listSite, "site_table");
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = listSite;
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                BindingSource bSource = new BindingSource();
-
-                bSource.DataSource = dt;
-                site_Datagrid.DataSource = bSource;
-                sda.Update(dt);
-                table = "employee_attendance_table";
-                setButtonText(table);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            if (check == false)
-            {
-                checkbox();
-            }
+            //MySqlCommand listEmployeeAttendence = new MySqlCommand("SELECT atid,eid,sid,date,enter_time,exit_time from hrm_database.employee_attendance_table;", Utils.MySql.myConn);
+            DataTable(Utils.MySql.listEmployeeAttendence, "employee_attendance_table");
         }
 
         private void btn_setting_Click(object sender, EventArgs e)
