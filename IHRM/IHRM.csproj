@@ -69,6 +69,12 @@
     <Compile Include="Data\Add_Super.Designer.cs">
       <DependentUpon>Add_Super.cs</DependentUpon>
     </Compile>
+    <Compile Include="List\ForgotPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\ForgotPass.Designer.cs">
+      <DependentUpon>ForgotPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="List\List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Add_Super.resx">
       <DependentUpon>Add_Super.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\ForgotPass.resx">
+      <DependentUpon>ForgotPass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="List\List.resx">
       <DependentUpon>List.cs</DependentUpon>

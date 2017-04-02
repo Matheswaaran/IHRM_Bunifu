@@ -131,5 +131,11 @@ namespace IHRM
                 Utils.MySql.myConn.Close();
             }
         }
+
+        private void login_forgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            List.ForgotPass forPass = new List.ForgotPass();
+            forPass.Show();
+        }
     }
 }
