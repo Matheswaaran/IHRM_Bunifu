@@ -111,6 +111,21 @@ namespace IHRM.List
             }
         }
 
+        private void Auth()
+        {
+            foreach (DataGridViewRow row in site_Datagrid.Rows)
+            {
+                if (int.Parse(row.Cells[4].Value.ToString()) == 1)
+                {
+                    row.Cells[4].Value = "Approved";
+                }
+                else if (int.Parse(row.Cells[4].Value.ToString()) == 0)
+                {
+                    row.Cells[4].Value = "Not Approved";
+                }
+            }
+        }
+
         private void btn_home_Click(object sender, EventArgs e)
         {
             //MySqlCommand listSite = new MySqlCommand("SELECT sid,name,address,district,state from hrm_database.site_table;", Utils.MySql.myConn);
@@ -142,6 +157,7 @@ namespace IHRM.List
         {
             //MySqlCommand listEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table;", Utils.MySql.myConn);
             DataTable(Utils.MySql.listEmployee, "employee_table");
+            //Auth();
         }
 
         private void site_add_Click(object sender, EventArgs e)
@@ -163,6 +179,7 @@ namespace IHRM.List
                 case "employee_table":
                     //MySqlCommand approvedEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where auth = 1;", Utils.MySql.myConn);
                     DataTable(Utils.MySql.approvedEmployee, "employee_table");
+                    //Auth();
                     break;
 
                 case "employee_attendance_table":
@@ -230,6 +247,7 @@ namespace IHRM.List
                 case "employee_table":
                     //MySqlCommand pendingEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where auth = 0;", Utils.MySql.myConn);
                     DataTable(Utils.MySql.pendingEmployee, "employee_table");
+                    //Auth();
                     break;
 
                 case "employee_attendance_table":
@@ -279,6 +297,7 @@ namespace IHRM.List
                 case "employee_table":
                     MySqlCommand searchEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where eid =" + int.Parse(site_search.Text) + ";", Utils.MySql.myConn);
                     DataTable(searchEmployee, "employee_table");
+                    //Auth();
                     break;
 
                 case "employee_attendance_table":
