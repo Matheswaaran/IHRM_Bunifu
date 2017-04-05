@@ -340,7 +340,7 @@ namespace IHRM.List
         private void btn_empAttendance_Click(object sender, EventArgs e)
         {
             //MySqlCommand listEmployeeAttendence = new MySqlCommand("SELECT atid,eid,sid,date,enter_time,exit_time from hrm_database.employee_attendance_table;", Utils.MySql.myConn);
-            DataTable(Utils.MySql.listEmployeeAttendence, "employee_attendance_table");
+            DataTable(Utils.MySql.allocatedEmployees, "employee_attendance_table");
         }
 
         private void btn_setting_Click(object sender, EventArgs e)

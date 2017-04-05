@@ -362,7 +362,7 @@
             this.site_picture.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.site_picture.BackColor = System.Drawing.Color.White;
             this.site_picture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("site_picture.BackgroundImage")));
-            this.site_picture.ButtonText = "Picture";
+            this.site_picture.ButtonText = "Document";
             this.site_picture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.site_picture.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.site_picture.ForeColor = System.Drawing.Color.SeaGreen;
@@ -374,7 +374,7 @@
             this.site_picture.Location = new System.Drawing.Point(329, 8);
             this.site_picture.Margin = new System.Windows.Forms.Padding(5);
             this.site_picture.Name = "site_picture";
-            this.site_picture.Size = new System.Drawing.Size(78, 49);
+            this.site_picture.Size = new System.Drawing.Size(96, 49);
             this.site_picture.TabIndex = 9;
             this.site_picture.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.site_picture.Visible = false;
@@ -406,10 +406,10 @@
             this.site_search.LineIdleColor = System.Drawing.Color.Gray;
             this.site_search.LineMouseHoverColor = System.Drawing.Color.Green;
             this.site_search.LineThickness = 3;
-            this.site_search.Location = new System.Drawing.Point(416, 17);
+            this.site_search.Location = new System.Drawing.Point(434, 17);
             this.site_search.Margin = new System.Windows.Forms.Padding(4);
             this.site_search.Name = "site_search";
-            this.site_search.Size = new System.Drawing.Size(268, 31);
+            this.site_search.Size = new System.Drawing.Size(250, 31);
             this.site_search.TabIndex = 7;
             this.site_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 

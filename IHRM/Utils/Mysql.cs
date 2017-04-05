@@ -20,5 +20,6 @@ namespace IHRM.Utils
         public static MySqlCommand approvedEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where auth = 1;", myConn);
         public static MySqlCommand pendingEmployee = new MySqlCommand("SELECT eid,name,cid,auth,aadhar_uid,skill,emp_type from hrm_database.employee_table where auth = 0;", myConn);
         public static MySqlCommand listEmployeeAttendence = new MySqlCommand("SELECT atid,eid,sid,date,enter_time,exit_time from hrm_database.employee_attendance_table;", myConn);
+        public static MySqlCommand allocatedEmployees = new MySqlCommand(" SELECT * from hrm_database.allocated_employee_table;",myConn);
     }
 }
